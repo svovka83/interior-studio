@@ -15,9 +15,5 @@ export default defineConfig({
 			},
 		},
 	},
-	// resolve: {
-	// 	alias: {
-	// 		"@img": resolve(__dirname, "public/images"),
-	// 	},
-	// },
+	base: "/interior-studio/",
 });
