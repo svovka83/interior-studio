@@ -94,3 +94,21 @@
 		margin-top: -12px;
 	}
 }
+
+.one-news-hr {
+	width: 100%;
+	height: 2px;
+	background-color: #828282;
+	opacity: 0.16;
+	margin-top: 0;
+	margin-bottom: 0;
+	@media (max-width: 1024px) {
+		margin-top: 85px;
+	}
+	@media (max-width: 768px) {
+		margin-top: 69px;
+	}
+	@media (max-width: 420px) {
+		margin-top: 60px;
+	}
+}

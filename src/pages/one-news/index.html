@@ -186,12 +186,71 @@
 			</div>
 		</section>
 
+		<!-- sotials (max-width: 1024px) -->
 		<div class="one-news-bottom__sotials responsive-container">
 			<!-- sotials () -->
 			<!-- prettier-ignore -->
 			{% from "src/partials/sotials.njk" import sotials %}
 			{{ sotials() }}
 		</div>
+
+		<!-- hr -->
+		<hr class="one-news-hr responsive-container" />
+
+		<!-- one-news-slider -->
+		<section class="one-news-slider responsive-container">
+			<!-- title ( name, classTitle ) -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/title.njk" import title %}
+			{{ title("Our latest news", "title_h2 title_dark") }}
+
+			<div class="one-news-swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<!-- oneNewsSlide( pathDesktop, pathLaptop, pathTablet, pathMobile ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/one-news-slide.njk" import oneNewsSlide %}
+						{{ oneNewsSlide( "/images/one-news-slider/slide-1_1400.jpg", "", "", "" ) }}
+					</div>
+					<div class="swiper-slide">
+						<!-- oneNewsSlide( pathDesktop, pathLaptop, pathTablet, pathMobile ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/one-news-slide.njk" import oneNewsSlide %}
+						{{ oneNewsSlide( "/images/one-news-slider/slide-2_1440.jpg", "", "", "" ) }}
+					</div>
+					<div class="swiper-slide">
+						<!-- oneNewsSlide( pathDesktop, pathLaptop, pathTablet, pathMobile ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/one-news-slide.njk" import oneNewsSlide %}
+						{{ oneNewsSlide( "/images/one-news-slider/slide-3_1440.jpg", "", "", "" ) }}
+					</div>
+					<div class="swiper-slide">
+						<!-- oneNewsSlide( pathDesktop, pathLaptop, pathTablet, pathMobile ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/one-news-slide.njk" import oneNewsSlide %}
+						{{ oneNewsSlide( "/images/one-news-slider/slide-1_1400.jpg", "", "", "" ) }}
+					</div>
+					<div class="swiper-slide">
+						<!-- oneNewsSlide( pathDesktop, pathLaptop, pathTablet, pathMobile ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/one-news-slide.njk" import oneNewsSlide %}
+						{{ oneNewsSlide( "/images/one-news-slider/slide-2_1440.jpg", "", "", "" ) }}
+					</div>
+					<div class="swiper-slide">
+						<!-- oneNewsSlide( pathDesktop, pathLaptop, pathTablet, pathMobile ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/one-news-slide.njk" import oneNewsSlide %}
+						{{ oneNewsSlide( "/images/one-news-slider/slide-3_1440.jpg", "", "", "" ) }}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="one-news-footer">
+			<!-- prettier-ignore -->
+			{% from "src/partials/footer-bottom.njk" import footerBottom %}
+			{{ footerBottom( "footer-bottom__icon_secondary" ) }}
+		</footer>
 
 		<script type="module" src="/src/main.js"></script>
 	</body>

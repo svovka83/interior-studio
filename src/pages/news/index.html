@@ -117,9 +117,10 @@
 				</div>
 			</section>
 
-			<!-- footer-bottom -->
+			<!-- footerBottom( classIcon ) -->
 			<!-- prettier-ignore -->
-			{% from "src/partials/footer-bottom.njk" import footerBottom %} {{ footerBottom() }}
+			{% from "src/partials/footer-bottom.njk" import footerBottom %}
+			{{ footerBottom( "footer-bottom__icon_primary" ) }}
 
 			<picture class="footer-news__picture">
 				<source srcset="/images/footers/news-footer_375.jpg" media="(max-width: 377px)" />

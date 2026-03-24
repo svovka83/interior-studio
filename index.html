@@ -387,7 +387,10 @@
 		<footer class="footer-main">
 			<!-- prettier-ignore -->
 			{% from "src/partials/footer.njk" import footer %} {{ footer() }}
-			{% from "src/partials/footer-bottom.njk" import footerBottom %} {{ footerBottom() }}
+			<!-- footerBottom( classIcon ) -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/footer-bottom.njk" import footerBottom %}
+			{{ footerBottom( "footer-bottom__icon_primary" ) }}
 
 			<picture class="footer-news__picture">
 				<source srcset="/images/footers/main-footer_377.jpg" media="(max-width: 377px)" />

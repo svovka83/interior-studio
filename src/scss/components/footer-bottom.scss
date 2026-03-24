@@ -24,7 +24,12 @@
 		.footer-bottom__icon {
 			width: 81px;
 			height: 26px;
-			fill: #fff;
+			&_primary {
+				fill: #fff;
+			}
+			&_secondary {
+				fill: #828282;
+			}
 		}
 	}
 }

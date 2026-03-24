@@ -41,6 +41,14 @@ selects.forEach((select) => {
 	observer.observe(dropdown);
 });
 
+// one news slider
+
+new Swiper(".one-news-swiper", {
+	slidesPerView: 3,
+	spaceBetween: 48,
+	speed: 700,
+});
+
 // main-swiper
 
 const mainTextSlider = new Swiper(".main-top__swiper-text", {

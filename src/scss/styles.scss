@@ -22,6 +22,7 @@
 @use "./components/input.scss";
 @use "./components/footer-bottom.scss";
 @use "./components/sotials.scss";
+@use "./components/one-news-slide.scss";
 
 // main
 
@@ -41,6 +42,7 @@
 
 @use "./pages/one-news/one-news-top.scss";
 @use "./pages/one-news/one-news-content.scss";
+@use "./pages/one-news/one-news-slider.scss";
 
 // for slider
 
