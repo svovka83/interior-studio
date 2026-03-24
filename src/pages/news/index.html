@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>News</title>
+	</head>
+	<body>
+		<!-- header ( classHeader, classLogo, classMenu, classLang, classBurgerMenu, classBurgerIcon, classButton ) -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/header.njk" import header %}
+		{{ header("header_whitefull", "logo_whitefull", "menu_whitefull", "lang_whitefull", "burger-menu_whitefull", "burger-menu__icon_whitefull",
+		"button_dark button_whitefull-border button_header-off") }}
+
+		<!-- news top -->
+		<section class="news-top responsive-container" id="go-to-top">
+			<div class="news-top__not-mobile">
+				<!-- title ( name, classTitle ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/title.njk" import title %}
+				{{ title("Our latest news", "title_h2 title_dark") }}
+				<!-- submenu ( ( link1, linkPath1, link2, linkPath2, link3, linkPath3, link4, linkPath4 ) ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/submenu.njk" import submenu %}
+				{{ submenu("All", "#!", "Blog", "#!", "News", "#!", "Advice from the designer", "#!") }}
+			</div>
+			<div class="news-top__mobile">
+				<!-- title ( name, classTitle ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/title.njk" import title %}
+				{{ title("Our news", "title_h2 title_dark") }}
+				<!-- dropdown (value, option1, option2, option3, classControl, classPointer, classChevron, classDropdown, classOption) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/dropdown.njk" import dropdown %}
+				{{ dropdown("Apartments", "Studio", "One-bedroom", "Mansion", "select__control_dark", "select__map-pointer_dark", "select__chevron_dark", "select__dropdown_dark", "select__option_dark") }}
+			</div>
+		</section>
+
+		<!-- news content -->
+		<div class="news-content">
+			<div class="news-content__grid our-container">
+				<!-- versatileCard ( name, pathDesktop, pathLaptop, pathTablet, pathMobile, classCard ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/versatile-card.njk" import versatileCard %}
+				{{ versatileCard("5 smart tips for productive collaboration with the designer",
+					"/images/versatile-cards/versatile-1_1440.jpg",
+					"/images/versatile-cards/versatile-1_1024.jpg",
+					"/images/versatile-cards/versatile-1_768.jpg",
+					"/images/versatile-cards/versatile-1_375.jpg") }}
+				<!-- simpleCard ( name, pathDesktop, pathLaptop, pathTablet, pathMobile ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/simple-card.njk" import simpleCard %}
+				{{ simpleCard("Non-standard plinth options",
+					"/images/simple-cards/simple-1_1440.jpg",
+					"/images/simple-cards/simple-1_1024.jpg",
+					"/images/simple-cards/simple-1_768.jpg",
+					"/images/simple-cards/simple-1_375.jpg") }}
+				<!-- simpleCard ( name, pathDesktop, pathLaptop, pathTablet, pathMobile ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/simple-card.njk" import simpleCard %}
+				{{ simpleCard("Interior design, LCD Rybalsky",
+					"/images/simple-cards/simple-2_1440.jpg",
+					"/images/simple-cards/simple-2_1024.jpg",
+					"/images/simple-cards/simple-2_768.jpg",
+					"/images/simple-cards/simple-2_375.jpg") }}
+				<!-- versatileCard ( name, text, pathDesktop, pathLaptop, pathTablet, pathMobile, classCard ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/versatile-card.njk" import versatileCard %}
+				{{ versatileCard("5 smart tips for productive collaboration with the designer",
+					"/images/versatile-cards/versatile-2_1440.jpg",
+					"/images/versatile-cards/versatile-2_1024.jpg",
+					"/images/versatile-cards/versatile-2_768.jpg",
+					"/images/versatile-cards/versatile-2_375.jpg", "versatile-card_reverse") }}
+			</div>
+			<div class="news-content__pagination">
+				<svg class="news-content__pagination-icon">
+					<use xlink:href="/images/icons.svg#arrow-left"></use>
+				</svg>
+				<ul class="news-content__pagination-list">
+					<li class="news-content__pagination-item">01</li>
+					<li class="news-content__pagination-item">02</li>
+					<li class="news-content__pagination-item">03</li>
+					<li class="news-content__pagination-item">...</li>
+					<li class="news-content__pagination-item">15</li>
+				</ul>
+				<svg class="news-content__pagination-icon">
+					<use xlink:href="/images/icons.svg#arrow-right"></use>
+				</svg>
+			</div>
+		</div>
+
+		<!-- news footer -->
+		<footer class="footer-news">
+			<section class="footer-news__inner responsive-container">
+				<div class="footer-news__title">
+					<!-- title ( name, classTitle ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/title.njk" import title %}
+					{{ title( "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "title_h2 title_light") }}
+				</div>
+				<div class="footer-news__content">
+					<div class="footer-news__text">
+						<!-- text ( text, classText ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/text.njk" import text %}
+						{{ text( "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam.", "text_white" ) }}
+					</div>
+					<div class="footer-news__email">
+						<!-- title input( placeholder, classInput, type ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/input.njk" import input %}
+						{{ input( "Email", "", "email") }}
+						<svg class="footer-news__email-icon">
+							<use xlink:href="/images/icons.svg#email-arrow"></use>
+						</svg>
+					</div>
+				</div>
+			</section>
+
+			<!-- footer-bottom -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/footer-bottom.njk" import footerBottom %} {{ footerBottom() }}
+
+			<picture class="footer-news__picture">
+				<source srcset="/images/footers/news-footer_375.jpg" media="(max-width: 377px)" />
+				<source srcset="/images/footers/news-footer_768.jpg" media="(max-width: 768px)" />
+				<source srcset="/images/footers/news-footer_1024.jpg" media="(max-width: 1024px)" />
+				<img class="footer-news__img" src="/images/footers/news-footer_1440.jpg" alt="footer news background" />
+			</picture>
+		</footer>
+
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>

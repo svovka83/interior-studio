@@ -1,0 +1,42 @@
+{% macro header( classHeader, classLogo, classMenu, classLang, classBurgerMenu, classBurgerIcon, classButton ) %}
+<header class="header {{classHeader}}">
+	<div class="header__inner container-big">
+
+		<a href="/">
+			<svg class="logo {{classLogo}}">
+				<use xlink:href="/images/icons.svg#logo-icon"></use>
+			</svg>
+		</a>
+
+		<ul class="menu {{classMenu}}">
+			<li class="menu__item">
+				<a class="menu__link" href="#!">Projects</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__link" href="#!">About us</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__link" href="/src/pages/news/">Blog</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__link" href="#!">Contacts</a>
+			</li>
+		</ul>
+
+		<div class="burger-menu {{classBurgerMenu}}">
+			<svg class="burger-menu__icon {{classBurgerIcon}}">
+				<use xlink:href="/images/icons.svg#burger-menu-icon"></use>
+			</svg>
+			<span class="burger-menu__text">Menu</span>
+		</div>
+
+		<span class="lang {{classLang}}">En</span>
+
+		<!-- button (titleBtn, classButton) -->
+		<!-- prettier-ignore -->
+		{% from "./button.njk" import button %}
+		{{ button("Send Request", classButton) }}
+
+	</div>
+</header>
+{% endmacro %}

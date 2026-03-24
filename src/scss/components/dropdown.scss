@@ -1,0 +1,122 @@
+.select {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 8px;
+	position: relative;
+}
+
+.select__wrapper {
+	position: relative;
+}
+
+.select__control {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	font-size: 11px;
+	letter-spacing: 6%;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	background-color: #ffffff80;
+	cursor: pointer;
+	&_light {
+		width: 117px;
+		color: white;
+		padding: 6px 11px 6px 13px;
+		border-radius: 9px;
+		box-shadow: 0 0 0 #ffffff3b, 0 1px 1px 0 #00000033;
+		@media (max-width: 1024px) {
+			border-radius: 13px;
+			padding: 5px 11px 5px 13px;
+		}
+	}
+	&_dark {
+		width: 128px;
+		color: #080808;
+		padding: 6px 11px 6px 13px;
+		border-radius: 14px;
+		border: 1px solid #c4c4c4;
+		box-shadow: none;
+	}
+}
+
+.select__map-pointer {
+	width: 10px;
+	height: 10px;
+	fill: white;
+	&_dark {
+		display: none;
+	}
+}
+
+.select__chevron {
+	width: 8px;
+	height: 5px;
+	transition: transform 0.3s ease-in-out;
+	margin-left: auto;
+	&_light {
+		fill: #ffffff80;
+		stroke: white;
+	}
+	&_dark {
+		fill: white;
+		stroke: #080808;
+	}
+	&_open {
+		transform: rotate(180deg);
+	}
+}
+
+.select__dropdown {
+	display: none;
+	width: 117px;
+	flex-direction: column;
+	gap: 8px;
+	position: absolute;
+	bottom: unset;
+	top: 110%;
+	right: 0;
+	z-index: 1010;
+	background-color: #ffffff80;
+	border: 1px solid #ffffff80;
+	border-radius: 9px;
+	padding: 4px;
+	background-color: #bdbdbd;
+	box-shadow: 0 0 0 #ffffff3b, 0 1px 1px 0 #00000033;
+	&_show-above {
+		top: unset;
+		bottom: 120%;
+	}
+	&_dark {
+		width: 128px;
+		height: 110px;
+		top: 110%;
+		left: 0;
+		color: #080808;
+		border: 1px solid #c4c4c4;
+		box-shadow: none;
+	}
+	&_open {
+		display: flex;
+	}
+	.select__option {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 600;
+		font-size: 11px;
+		letter-spacing: 6%;
+		color: white;
+		text-align: start;
+		background-color: #ffffff80;
+		border: 1px solid #ffffff80;
+		border-radius: 8px;
+		padding: 6px 11px 6px 13px;
+		cursor: pointer;
+		&_dark {
+			color: #080808;
+			border: 1px solid #c4c4c4;
+		}
+		&:hover {
+			background-color: #ffffffa0;
+		}
+	}
+}

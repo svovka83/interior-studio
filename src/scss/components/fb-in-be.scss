@@ -1,0 +1,22 @@
+.fb-in-be-block {
+	display: flex;
+	align-items: center;
+	gap: 0 16px;
+	.fb-in-be-unit {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 600;
+		font-size: 11px;
+		letter-spacing: 6%;
+	}
+	&_light {
+		color: white;
+	}
+	&_dark {
+		// color: black;
+	}
+	&_680-none {
+		@media (max-width: 680px) {
+			display: none;
+		}
+	}
+}

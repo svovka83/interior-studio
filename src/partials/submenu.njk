@@ -1,0 +1,8 @@
+{% macro submenu( link1, linkPath1, link2, linkPath2, link3, linkPath3, link4, linkPath4 ) %}
+  <ul class="submenu">
+		<li class="submenu__item"><a class="submenu__link" href="{{linkPath1}}">{{link1}}</a></li>
+		<li class="submenu__item"><a class="submenu__link" href="{{linkPath2}}">{{link2}}</a></li>
+		<li class="submenu__item"><a class="submenu__link" href="{{linkPath3}}">{{link3}}</a></li>
+		<li class="submenu__item"><a class="submenu__link" href="{{linkPath4}}">{{link4}}</a></li>
+	</ul>
+{% endmacro %}

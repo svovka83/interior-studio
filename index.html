@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>interior-studio</title>
+	</head>
+	<body>
+		<!-- header ( classHeader, classLogo, classMenu, classLang, classBurgerMenu, classBurgerIcon, classButton ) -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/header.njk" import header %}
+		{{ header("header_transparent", "logo_transparent", "menu_transparent", "lang_transparent", "", "burger-menu__icon_transparent",
+		"button_light button_transparent-border button_header-off") }}
+
+		<!-- main-top -->
+		<section class="main-top" id="go-to-top">
+			<div class="main-top__swiper-img">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<picture>
+							<source srcset="/images/main-top/slide_377.jpg" media="(max-width: 377px)" />
+							<source srcset="/images/main-top/slide_768.jpg" media="(max-width: 768px)" />
+							<source srcset="/images/main-top/slide_1024.jpg" media="(max-width: 1024px)" />
+							<img class="main-top__img" src="/images/main-top/slide_1440.jpg" alt="slide 1" />
+						</picture>
+					</div>
+					<div class="swiper-slide">
+						<picture>
+							<source srcset="/images/main-top/slide_377.jpg" media="(max-width: 377px)" />
+							<source srcset="/images/main-top/slide_768.jpg" media="(max-width: 768px)" />
+							<source srcset="/images/main-top/slide_1024.jpg" media="(max-width: 1024px)" />
+							<img class="main-top__img" src="/images/main-top/slide_1440.jpg" alt="slide 2" />
+						</picture>
+					</div>
+					<div class="swiper-slide">
+						<picture>
+							<source srcset="/images/main-top/slide_377.jpg" media="(max-width: 377px)" />
+							<source srcset="/images/main-top/slide_768.jpg" media="(max-width: 768px)" />
+							<source srcset="/images/main-top/slide_1024.jpg" media="(max-width: 1024px)" />
+							<img class="main-top__img" src="/images/main-top/slide_1440.jpg" alt="slide 3" />
+						</picture>
+					</div>
+					<div class="swiper-slide">
+						<picture>
+							<source srcset="/images/main-top/slide_377.jpg" media="(max-width: 377px)" />
+							<source srcset="/images/main-top/slide_768.jpg" media="(max-width: 768px)" />
+							<source srcset="/images/main-top/slide_1024.jpg" media="(max-width: 1024px)" />
+							<img class="main-top__img" src="/images/main-top/slide_1440.jpg" alt="slide 4" />
+						</picture>
+					</div>
+				</div>
+			</div>
+			<div class="main-top__inner container-big">
+				<div class="main-top__swiper-text">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<h1 class="main-top__heading">Thoughtful making of space</h1>
+						</div>
+						<div class="swiper-slide">
+							<h1 class="main-top__heading">Cozy atmosphere around</h1>
+						</div>
+						<div class="swiper-slide">
+							<h1 class="main-top__heading">Perfect proportions</h1>
+						</div>
+						<div class="swiper-slide">
+							<h1 class="main-top__heading">Comfortable places</h1>
+						</div>
+					</div>
+				</div>
+				<div class="main-top__progress-bar">
+					<!-- make progress-bar a component ** -->
+					<div class="progress-bar">
+						<div id="progress-prev" class="progress-bar__button main-top-swiper-prev">
+							<svg class="progress-bar__icon">
+								<use xlink:href="images/icons.svg#progress-prev"></use>
+							</svg>
+							<p>0<span id="progress-num-next">1</span></p>
+						</div>
+						<div class="main-top-swiper-pagination"></div>
+						<div id="progress-next" class="progress-bar__button main-top-swiper-next">
+							<p>04</p>
+							<svg class="progress-bar__icon">
+								<use xlink:href="images/icons.svg#progress-next"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="main-top__discover">
+					<!-- discover (classDiscover) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/discover-more.njk" import discover %}
+					{{ discover("discover_light") }}
+				</div>
+				<div class="main-top__bottom">
+					<!-- fbInBe ( classFbInBe ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/fb-in-be.njk" import fbInBe %}
+					{{ fbInBe("fb-in-be-block_light fb-in-be-block_680-none") }}
+					<!-- dropdown (value, option1, option2, option3, classControl, classPointer, classChevron) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/dropdown.njk" import dropdown %}
+					{{ dropdown("Berlin", "Paris", "London", "Tokyo", "select__control_light", "", "select__chevron_light") }}
+					<!-- info -->
+					<div class="main-top__info">
+						<a class="main-top__tel" href="tel:+380983527547">+380983527547</a>
+						<a class="main-top__email" href="mailto:info@gmail.com"
+							><span class="main-top__email_E">E: </span>info@gmail.com</a
+						>
+					</div>
+				</div>
+			</div>
+			<picture>
+				<source srcset="/images/main-top/aside-text_377.png" media="(max-width: 377px)" />
+				<source srcset="/images/main-top/aside-text_768.png" media="(max-width: 768px)" />
+				<source srcset="/images/main-top/aside-text_1024.png" media="(max-width: 1024px)" />
+				<img class="main-top__aside-text" src="/images/main-top/aside-text_1440.png" alt="next project" />
+			</picture>
+			<!-- needs to delete -->
+			<div class="main-top__mobile-toolbar">
+				<div class="toolbar">
+					<div class="toolbar__buttons-block">
+						<button class="toolbar__button toolbar-swiper-prev">
+							<svg class="toolbar__icon">
+								<use xlink:href="/images/icons.svg#toolbar-prev"></use>
+							</svg>
+						</button>
+						<button class="toolbar__button toolbar-swiper-next">
+							<svg class="toolbar__icon">
+								<use xlink:href="/images/icons.svg#toolbar-next"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="toolbar__swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<svg class="toolbar__icon">
+									<use xlink:href="/public/images/icons.svg#toolbar-icon1"></use>
+								</svg>
+							</div>
+							<div class="swiper-slide">
+								<svg class="toolbar__icon">
+									<use xlink:href="/public/images/icons.svg#toolbar-icon2"></use>
+								</svg>
+							</div>
+							<div class="swiper-slide">
+								<svg class="toolbar__icon">
+									<use xlink:href="/public/images/icons.svg#toolbar-icon3"></use>
+								</svg>
+							</div>
+							<div class="swiper-slide">
+								<svg class="toolbar__icon">
+									<use xlink:href="/public/images/icons.svg#toolbar-icon1"></use>
+								</svg>
+							</div>
+							<div class="swiper-slide">
+								<svg class="toolbar__icon">
+									<use xlink:href="/public/images/icons.svg#toolbar-icon2"></use>
+								</svg>
+							</div>
+							<div class="swiper-slide">
+								<svg class="toolbar__icon">
+									<use xlink:href="/public/images/icons.svg#toolbar-icon3"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- philosophy -->
+		<section class="philosophy">
+			<div class="philosophy-top container-big">
+				<div class="container">
+					<div class="philosophy-top__content">
+						<!-- title ( name, classTitle ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/title.njk" import title %}
+						{{ title("Company Philosophy", "title_h2 title_dark") }}
+						<p class="philosophy-top__text philosophy-top__text_first">
+							The basic philosophy of our studio is to create individual, aesthetically stunning solutions
+							for our customers by lightning&#8209;fast development of projects employing unique styles
+							and architecture. Even if you don't have a ready sketch of what you want - we will help you
+							get the result.
+						</p>
+						<p class="philosophy-top__text philosophy-top__text_second">
+							We can also help you create harmony out of seemingly completely incompatible elements in the
+							interior or the exterior design. Do you want to combine classics and abstract art? Modern
+							and retro? Love everything associated with the 1940's? No problem!
+						</p>
+						<!-- discover (classDiscover) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/discover-more.njk" import discover %}
+					{{ discover("discover_dark") }}
+					</div>
+				</div>
+				<picture>
+					<source srcset="/images/philosophy/philosophy-top_1024.jpg" media="(max-width: 1080px)" />
+					<img
+						class="philosophy-top__img"
+						src="/images/philosophy/philosophy-top_1440.jpg"
+						alt="philosophy top image" />
+				</picture>
+			</div>
+			<div class="philosophy-bottom container">
+				<div class="philosophy-bottom__img-block">
+					<picture>
+						<source
+							srcset="/images/philosophy/philosophy-bottom-primary_377.jpg"
+							media="(max-width: 600px)" />
+						<source
+							srcset="/images/philosophy/philosophy-bottom-primary_768.jpg"
+							media="(max-width: 768px)" />
+						<source
+							srcset="/images/philosophy/philosophy-bottom-primary_1024.jpg"
+							media="(max-width: 1024px)" />
+						<img
+							class="philosophy-bottom__img-primary"
+							src="/images/philosophy/philosophy-bottom-primary_1440.jpg"
+							alt="philosophy bottom primary image" />
+					</picture>
+					<picture>
+						<source
+							srcset="/images/philosophy/philosophy-bottom-secondary_377.jpg"
+							media="(max-width: 600px)" />
+						<source
+							srcset="/images/philosophy/philosophy-bottom-secondary_768.jpg"
+							media="(max-width: 768px)" />
+						<source
+							srcset="/images/philosophy/philosophy-bottom-secondary_1024.jpg"
+							media="(max-width: 1024px)" />
+						<img
+							class="philosophy-bottom__img-secondary"
+							src="/images/philosophy/philosophy-bottom-secondary_1440.jpg"
+							alt="philosophy bottom secondary image" />
+					</picture>
+				</div>
+				<div class="philosophy-bottom__content">
+					<svg class="philosophy-bottom__icon">
+						<use xlink:href="/images/icons.svg#quotes-icon"></use>
+					</svg>
+					<p class="philosophy-bottom__text">
+						We can also help you create harmony out of seemingly completely incompatible elements in the
+						interior or the exterior design.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- our projects -->
+		<section class="our-projects">
+			<div class="our-container">
+				<!-- title ( name, classTitle ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/title.njk" import title %}
+				{{ title("Our Projects", "title_h2 title_light") }}
+				<p class="our-projects__subtext">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
+					posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+				</p>
+				<div class="our-projects__grid">
+					<!-- projectCard ( classCard, name, classTitle, classBottom, pathDesktop, pathLaptop, pathTablet, pathMobile ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/project-card.njk" import projectCard %}
+					{{ projectCard(
+						"project-card_normal",
+						"Eyewear store interior",
+						"title_card",
+						"project-card__title-block_normal",
+						"/images/our-projects/project-1_1440.jpg",
+						"/images/our-projects/project-1_1024.jpg",
+						"/images/our-projects/project-1_768.jpg",
+						"/images/our-projects/project-1_377.jpg") }}
+					<!-- prettier-ignore -->
+					{% from "src/partials/project-card.njk" import projectCard %}
+					{{ projectCard(
+						"project-card_normal",
+						"Minimalist style home",
+						"title_card",
+						"project-card__title-block_normal",
+						"/images/our-projects/project-2_1440.jpg",
+						"/images/our-projects/project-2_1024.jpg",
+						"/images/our-projects/project-2_768.jpg",
+						"/images/our-projects/project-2_377.jpg") }}
+					<!-- prettier-ignore -->
+					{% from "src/partials/project-card.njk" import projectCard %}
+					{{ projectCard(
+						"project-card_full",
+						"Residence by the lighthouse",
+						"title_card",
+						"project-card__title-block_full",
+						"/images/our-projects/project-3_1440.jpg",
+						"/images/our-projects/project-3_1024.jpg",
+						"/images/our-projects/project-3_768.jpg",
+						"/images/our-projects/project-3_377.jpg") }}
+					<!-- prettier-ignore -->
+					{% from "src/partials/project-card.njk" import projectCard %}
+					{{ projectCard(
+						"project-card_normal",
+						"Eyewear store interior",
+						"title_card",
+						"project-card__title-block_normal",
+						"/images/our-projects/project-4_1440.jpg",
+						"/images/our-projects/project-4_1024.jpg",
+						"/images/our-projects/project-4_768.jpg",
+						"/images/our-projects/project-4_377.jpg") }}
+					<!-- prettier-ignore -->
+					{% from "src/partials/project-card.njk" import projectCard %}
+					{{ projectCard(
+						"project-card_normal",
+						"House on a Hillside",
+						"title_card",
+						"project-card__title-block_normal",
+						"",
+						"",
+						"",
+						"/images/our-projects/project-5_377.jpg") }}
+					<div class="our-projects__card-more">
+						<!-- title ( name, classTitle ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/title.njk" import title %}
+						{{ title( "See more 60 projects", "title_h3 title_dark") }}
+						<picture>
+							<source srcset="/images/our-projects/see-more_377.jpg" media="(max-width: 767px)" />
+							<source srcset="/images/our-projects/see-more_768.jpg" media="(max-width: 1023px)" />
+							<source srcset="/images/our-projects/see-more_1024.jpg" media="(max-width: 1439px)" />
+							<img
+								class="our-projectcard-img"
+								src="/images/our-projects/see-more_1440.jpg"
+								alt="see more cards" />
+						</picture>
+					</div>
+				</div>
+			</div>
+			<!-- it must be a component!!! -->
+			<section class="our-projects__bottom container">
+				<div class="our-projects__bottom-title">
+					<!-- title ( name, classTitle ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/title.njk" import title %}
+					{{ title("Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", "title_h2 title_light") }}
+				</div>
+				<div class="our-projects__bottom-content">
+					<p class="our-projects__bottom-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
+						posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+					</p>
+					<!-- button (titleBtn, classButton) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/button.njk" import button %}
+					{{ button("Make request", "button_dark button_whitefull") }}
+				</div>
+				<img
+					class="our-projects__bottom-bg"
+					src="/public/images/our-projects/cascade-bg.png"
+					alt="cascade background" />
+			</section>
+		</section>
+
+		<!-- above footer -->
+		<section class="above-footer">
+			<div class="above-footer__inner container-big">
+				<div class="above-footer__content">
+					<!-- title ( name, classTitle ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/title.njk" import title %}
+					{{ title("@lorem.ipsum", "title_h1 title_dark") }}
+					<p class="above-footer__subtext">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
+						posuere.
+					</p>
+				</div>
+				<picture class="above-footer__picture">
+					<source srcset="/images/above-footer/above-footer_377.png" media="(max-width: 377px)" />
+					<source srcset="/images/above-footer/above-footer_768.png" media="(max-width: 768px)" />
+					<source srcset="/images/above-footer/above-footer_1024.png" media="(max-width: 1024px)" />
+					<img
+						class="above-footer__img"
+						src="/images/above-footer/above-footer_1440.png"
+						alt="see more cards" />
+				</picture>
+			</div>
+		</section>
+
+		<!-- footer -->
+		<footer class="footer-main">
+			<!-- prettier-ignore -->
+			{% from "src/partials/footer.njk" import footer %} {{ footer() }}
+			{% from "src/partials/footer-bottom.njk" import footerBottom %} {{ footerBottom() }}
+
+			<picture class="footer-news__picture">
+				<source srcset="/images/footers/main-footer_377.jpg" media="(max-width: 377px)" />
+				<source srcset="/images/footers/main-footer_768.jpg" media="(max-width: 768px)" />
+				<source srcset="/images/footers/main-footer_1024.jpg" media="(max-width: 1024px)" />
+				<img class="footer-main__bg" src="/images/footers/main-footer_1440.jpg" alt="footer main background" />
+			</picture>
+		</footer>
+
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>

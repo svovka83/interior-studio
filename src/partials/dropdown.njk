@@ -1,0 +1,26 @@
+{% macro dropdown(value, option1, option2, option3, classControl, classPointer, classChevron, classDropdown, classOption) %}
+<div class="select">
+	<div class="select__wrapper">
+		<button type="button" class="select__control {{classControl}}">
+			<svg class="select__map-pointer {{classPointer}}">
+				<use xlink:href="/images/icons.svg#map-pointer"></use>
+			</svg>
+			<span class="select__value">{{ value }}</span>
+			<svg class="select__chevron {{classChevron}}">
+				<use xlink:href="/images/icons.svg#chevron"></use>
+			</svg>
+		</button>
+		<div class="select__dropdown {{classDropdown}}">
+			<button type="button" class="select__option {{classOption}}">
+				<span class="select__value">{{ option1 }}</span>
+			</button>
+			<button type="button" class="select__option {{classOption}}">
+				<span class="select__value">{{ option2 }}</span>
+			</button>
+			<button type="button" class="select__option {{classOption}}">
+				<span class="select__value">{{ option3 }}</span>
+			</button>
+		</div>
+	</div>
+</div>
+{% endmacro %}

@@ -1,0 +1,140 @@
+.footer__top {
+	padding-top: 123px;
+	padding-bottom: 119px;
+	@media (max-width: 1024px) {
+		padding-top: 108px;
+		padding-bottom: 112px;
+	}
+	@media (max-width: 768px) {
+		padding-top: 92px;
+		padding-bottom: 86px;
+	}
+	@media (max-width: 550px) {
+		padding-top: 60px;
+		padding-bottom: 54px;
+	}
+}
+
+.footer__title-block {
+	max-width: 390px;
+	@media (max-width: 550px) {
+		max-width: 315px;
+	}
+	.footer__subtext {
+		line-height: 171%;
+		color: white;
+		opacity: 0.6;
+		margin-top: 16px;
+	}
+}
+
+.footer__grid {
+	display: grid;
+	grid-template-columns: 653px 1fr;
+	row-gap: 65px;
+	margin-top: 63px;
+	@media (max-width: 1024px) {
+		grid-template-columns: 607px 1fr;
+		row-gap: 57px;
+		margin-top: 55px;
+	}
+	@media (max-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 49px;
+		margin-top: 49px;
+	}
+	@media (max-width: 550px) {
+		grid-template-columns: 1fr;
+		row-gap: 30px;
+		margin-top: 39px;
+	}
+	.footer__addresses {
+		display: flex;
+		align-items: center;
+		.footer__address-block:nth-child(1) {
+			margin-right: 85px;
+			@media (max-width: 1024px) {
+				margin-right: 23px;
+			}
+			@media (max-width: 768px) {
+				margin-right: 19px;
+			}
+			@media (max-width: 550px) {
+				margin-right: 9px;
+			}
+		}
+		.footer__address-block:nth-child(2) {
+			margin-right: 114px;
+			@media (max-width: 1024px) {
+				margin-right: 52px;
+			}
+			@media (max-width: 768px) {
+				margin-right: 47px;
+			}
+			@media (max-width: 550px) {
+				margin-right: 10px;
+			}
+		}
+		@media (max-width: 768px) {
+			grid-column: 1 / 3;
+		}
+		@media (max-width: 550px) {
+			grid-column: 1;
+			flex-wrap: wrap;
+			justify-content: start;
+			gap: 32px 41px;
+		}
+	}
+	.footer__info {
+		width: 103px;
+		justify-self: end;
+		@media (max-width: 768px) {
+			justify-self: center;
+			grid-column: 2;
+			grid-row: 2;
+			margin-left: 55px;
+			margin-bottom: 10px;
+		}
+		@media (max-width: 550px) {
+			grid-column: 1;
+			justify-self: start;
+			margin-left: 0;
+			margin-bottom: 16px;
+		}
+	}
+}
+
+.footer__address-block {
+	width: 150px;
+	@media (max-width: 550px) {
+		width: 125px;
+	}
+	.footer__address-text {
+		font-size: 11px;
+		letter-spacing: 6%;
+		color: white;
+		opacity: 0.7;
+		margin-top: 15px;
+		@media (max-width: 550px) {
+			margin-top: 9px;
+		}
+		p {
+			line-height: 1.92;
+		}
+	}
+}
+
+.footer__info-link {
+	font-weight: 600;
+	font-size: 11px;
+	letter-spacing: 6%;
+	line-height: 1.92;
+	color: white;
+	margin-bottom: 21px;
+	@media (max-width: 768px) {
+		margin-bottom: 10px;
+	}
+	@media (max-width: 550px) {
+		margin-bottom: 12px;
+	}
+}

@@ -1,0 +1,12 @@
+.text {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 171%;
+	&_light {
+		color: #080808;
+	}
+	&_white {
+		color: #fff;
+	}
+}

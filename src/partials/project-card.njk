@@ -1,0 +1,25 @@
+{% macro projectCard( classCard, name, classTitle, classBottom, pathDesktop, pathLaptop, pathTablet, pathMobile ) %}
+<div class="project-card {{classCard}}">
+	<div class="project-card__location-block">
+		<span>Lodz</span>
+		<span>16.10.2018</span>
+		<span>80 sq.m</span>
+	</div>
+	<div class="project-card__title-block {{classBottom}}">
+		<!-- title ( name, classTitle ) -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/title.njk" import title %}
+		{{ title(name, classTitle) }}
+		<!-- discover (classDiscover) -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/discover-more.njk" import discover %}
+		{{ discover("discover_light") }}
+	</div>
+	<picture class="project-card__picture">
+		<source srcset="{{pathMobile}}" media="(max-width: 767px)" />
+		<source srcset="{{pathTablet}}" media="(max-width: 1023px)" />
+		<source srcset="{{pathLaptop}}" media="(max-width: 1439px)" />
+		<img class="project-card__img" src="{{ pathDesktop }}" alt="project card image" />
+	</picture>
+</div>
+{% endmacro %}

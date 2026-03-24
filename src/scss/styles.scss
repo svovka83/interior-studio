@@ -1,0 +1,47 @@
+// settings
+
+@use "./settings/reset.scss";
+@use "./settings/fonts.scss";
+@use "./settings/variables.scss" as *;
+@use "./settings/base.scss";
+
+// components
+
+@use "./components/header.scss";
+@use "./components/button.scss";
+@use "./components/discover-more.scss";
+@use "./components/fb-in-be.scss";
+@use "./components/dropdown.scss";
+@use "./components/title.scss";
+@use "./components/text.scss";
+@use "./components/project-card.scss";
+@use "./components/footer.scss";
+@use "./components/submenu.scss";
+@use "./components/simple-card.scss";
+@use "./components/versatile-card.scss";
+@use "./components/input.scss";
+@use "./components/footer-bottom.scss";
+@use "./components/sotials.scss";
+
+// main
+
+@use "./pages/main/main-top.scss";
+@use "./pages/main/philosophy.scss";
+@use "./pages/main/our-projects.scss";
+@use "./pages/main/above-footer.scss";
+@use "./pages/main/main-footer.scss";
+
+// news
+
+@use "./pages/news/news-top.scss";
+@use "./pages/news/news-content.scss";
+@use "./pages/news/news-footer.scss";
+
+// news
+
+@use "./pages/one-news/one-news-top.scss";
+@use "./pages/one-news/one-news-content.scss";
+
+// for slider
+
+@import "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css";

@@ -1,0 +1,17 @@
+.sotials {
+	.sotials__title {
+		font-weight: 500;
+		line-height: 171%;
+		color: #080808;
+		margin-bottom: 12px;
+	}
+	.sotials__list {
+		display: flex;
+		align-items: center;
+		gap: 0 8px;
+		.sotials__img {
+			width: 24px;
+			height: 24px;
+		}
+	}
+}

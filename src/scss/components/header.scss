@@ -1,0 +1,138 @@
+// needs to be refactored to put together all classes
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	&_transparent {
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+	&_whitefull {
+		background-color: white;
+	}
+}
+
+.header__inner {
+	height: 96px;
+	padding-left: 63px;
+	padding-right: 64px;
+	display: flex;
+	align-items: center;
+	@media (max-width: 1024px) {
+		height: 92px;
+		padding-left: 56px;
+		padding-right: 56px;
+	}
+	@media (max-width: 768px) {
+		padding-right: 47px;
+	}
+	@media (max-width: 570px) {
+		height: 62px;
+		padding-left: 25px;
+		padding-right: 24px;
+	}
+}
+
+.logo {
+	width: 53px;
+	height: 10px;
+	&_transparent {
+		fill: #fdfdfd52;
+		stroke: #fdfdfd52;
+	}
+	&_whitefull {
+		fill: #000;
+		stroke: #000;
+	}
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	gap: 0 48px;
+	margin-left: 148px;
+	margin-right: auto;
+	&_transparent {
+		color: #fff;
+	}
+	&_whitefull {
+		color: #080808;
+	}
+	.menu__link {
+		font-weight: 600;
+		font-size: 11px;
+		letter-spacing: 6%;
+		color: inherit;
+	}
+	@media (max-width: 1024px) {
+		display: none;
+	}
+}
+
+.burger-menu {
+	display: none;
+	align-items: start;
+	gap: 0 24px;
+	margin-left: 102px;
+	margin-right: auto;
+	.burger-menu__icon {
+		width: 28px;
+		height: 8px;
+		&_transparent {
+			fill: #fff;
+		}
+		&_whitefull {
+			fill: #080808;
+		}
+	}
+	.burger-menu__text {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 600;
+		font-size: 11px;
+		letter-spacing: 6%;
+		color: #fff;
+	}
+	@media (max-width: 1024px) {
+		display: flex;
+	}
+	@media (max-width: 768px) {
+		margin-left: 98px;
+		gap: 0 21px;
+	}
+	&_whitefull {
+		@media (max-width: 768px) {
+			margin-left: 80px;
+		}
+	}
+	@media (max-width: 570px) {
+		order: 1;
+		margin-left: 0;
+		margin-right: 0;
+		.burger-menu__text {
+			display: none;
+		}
+	}
+}
+
+.lang {
+	font-weight: 600;
+	font-size: 11px;
+	letter-spacing: 6%;
+	color: #fff;
+	margin-right: 83px;
+	&_transparent {
+		color: #fff;
+	}
+	&_whitefull {
+		color: #080808;
+	}
+	@media (max-width: 1024px) {
+		margin-right: 56px;
+	}
+	@media (max-width: 570px) {
+		margin-left: auto;
+		margin-right: 54px;
+	}
+}

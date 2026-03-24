@@ -1,0 +1,35 @@
+.discover {
+	display: flex;
+	align-items: center;
+	.discover__line {
+		display: inline-block;
+		height: 1px;
+		&_short {
+			width: 8px;
+		}
+		&_long {
+			width: 56px;
+		}
+	}
+	.discover__text {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 700;
+		font-size: 10px;
+		letter-spacing: 12%;
+		text-transform: uppercase;
+		padding-left: 8px;
+		padding-right: 9px;
+	}
+	&_light {
+		color: #fff;
+		.discover__line {
+			background-color: #ffffff66;
+		}
+	}
+	&_dark {
+		color: #080808;
+		.discover__line {
+			background-color: #31313133;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+.title {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	&_h1 {
+		font-size: 56px;
+		@media (max-width: 1024px) {
+			font-size: 48px;
+		}
+		@media (max-width: 768px) {
+			font-size: 44px;
+		}
+		@media (max-width: 420px) {
+			font-size: 32px;
+		}
+	}
+	&_h2 {
+		font-size: 36px;
+		@media (max-width: 1024px) {
+			font-size: 32px;
+		}
+		@media (max-width: 420px) {
+			font-size: 26px;
+		}
+	}
+	&_h3 {
+		font-size: 22px;
+		line-height: 1.27;
+		@media (max-width: 1439px) {
+			font-size: 20px;
+		}
+	}
+	&_h4 {
+		font-size: 16px;
+		line-height: 1.37;
+	}
+	&_card {
+		max-width: 273px;
+		font-size: 20px;
+		line-height: 1.27;
+		color: #fafafa;
+		text-align: start;
+	}
+	&_simple {
+		font-size: 28px;
+		line-height: 1.27;
+		@media (max-width: 1439px) {
+			font-size: 20px;
+		}
+		@media (max-width: 1023px) {
+			font-size: 16px;
+		}
+	}
+	&_light {
+		color: #fff;
+	}
+	&_dark {
+		color: #080808;
+	}
+}

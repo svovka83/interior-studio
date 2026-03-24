@@ -1,0 +1,32 @@
+{% macro versatileCard( name, pathDesktop, pathLaptop, pathTablet, pathMobile, classCard ) %}
+<div class="versatile-card {{ classCard }}">
+	<div class="versatile-card__content">
+		<div class="versatile-card__title">
+			<!-- title ( name, classTitle ) -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/title.njk" import title %}
+			{{ title(name, "title_simple title_dark") }}
+		</div>
+		<div class="versatile-card__text">
+			<!-- text ( text, classText ) -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/text.njk" import text %}
+			{{ text( "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida urna. Donec blandit sapien eu diam ullamcorper euismod. Nam tempus pellentesque ligula ut aliquam.", "text_light" ) }}
+		</div>
+		<div class="versatile-card__discover">
+			<!-- discover (classDiscover) -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/discover-more.njk" import discover %}
+			{{ discover("discover_dark") }}
+		</div>
+	</div>
+	<a href="/src/pages/one-news/">
+		<picture class="versatile-card__picture">
+			<source srcset="{{pathMobile}}" media="(max-width: 767px)" />
+			<source srcset="{{pathTablet}}" media="(max-width: 1023px)" />
+			<source srcset="{{pathLaptop}}" media="(max-width: 1439px)" />
+			<img class="versatile-card__img" src="{{ pathDesktop }}" alt="versatile card image" />
+		</picture>
+	</a>
+</div>
+{% endmacro %}
