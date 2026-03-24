@@ -1,6 +1,19 @@
 import "./scss/styles.scss";
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
 
+// burger-menu
+
+const burgerBtn = document.querySelectorAll(".burger-menu");
+const burgerMenu = document.querySelectorAll(".burger-menu-screen");
+
+burgerBtn.forEach((btn) => {
+	btn.addEventListener("click", () => {
+		burgerMenu.forEach((menu) => {
+			menu.classList.toggle("burger-menu-screen_active");
+		});
+	});
+});
+
 // drop-down
 
 const selects = document.querySelectorAll(".select");
@@ -26,18 +39,19 @@ selects.forEach((select) => {
 		});
 	});
 
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach(
-			(entry) => {
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
 				if (!entry.isIntersecting) {
 					entry.target.classList.toggle("select__dropdown_show-above");
 				}
-			},
-			{
-				threshold: 0.5,
-			}
-		);
-	});
+			});
+		},
+		{
+			threshold: 1,
+		}
+	);
+
 	observer.observe(dropdown);
 });
 

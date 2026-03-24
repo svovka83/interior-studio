@@ -12,6 +12,11 @@
 		{{ header("header_whitefull", "logo_whitefull", "menu_whitefull", "lang_whitefull", "burger-menu_whitefull", "burger-menu__icon_whitefull",
 		"button_dark button_whitefull-border button_header-off") }}
 
+		<!-- burger-menu-screen () -->
+		<!-- prettier-ignore -->
+		{% from "./src/partials/burger-menu.njk" import burgerMenu %}
+		{{ burgerMenu() }}
+
 		<!-- one-news-top -->
 		<section class="one-news-top responsive-container">
 			<div class="one-news-top__content">
