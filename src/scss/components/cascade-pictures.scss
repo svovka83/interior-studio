@@ -24,6 +24,8 @@
 	.cascade-pictures__title {
 		max-width: 424px;
 		line-height: 1.42;
+		z-index: 20;
+		pointer-events: none;
 		@media (max-width: 1024px) {
 			text-wrap: balance;
 		}
@@ -35,6 +37,7 @@
 		width: 339px;
 		align-self: flex-end;
 		z-index: 20;
+		pointer-events: none;
 		@media (max-width: 1024px) {
 			width: unset;
 			max-width: 447px;

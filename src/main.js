@@ -113,18 +113,3 @@ nextBtn.addEventListener("click", () => {
 		nextText.innerHTML = `${counterProgress}`;
 	}
 });
-
-// toolbar-swiper
-
-new Swiper(".toolbar__swiper", {
-	initialSlide: 4,
-	slidesPerView: 3,
-	spaceBetween: 54,
-	speed: 500,
-	allowTouchMove: false,
-
-	navigation: {
-		nextEl: ".toolbar-swiper-next",
-		prevEl: ".toolbar-swiper-prev",
-	},
-});

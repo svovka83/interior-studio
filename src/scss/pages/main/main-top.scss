@@ -9,10 +9,7 @@
 		height: 710px;
 	}
 	@media (max-width: 768px) {
-		height: 959px;
-	}
-	@media (max-width: 377px) {
-		height: 542px;
+		height: 100vh;
 	}
 }
 
@@ -25,10 +22,7 @@
 		height: 710px;
 	}
 	@media (max-width: 768px) {
-		height: 959px;
-	}
-	@media (max-width: 377px) {
-		height: 542px;
+		height: 100vh;
 	}
 	.main-top__img {
 		width: 100%;
@@ -37,29 +31,27 @@
 			height: 710px;
 		}
 		@media (max-width: 768px) {
-			height: 959px;
-		}
-		@media (max-width: 377px) {
-			height: 542px;
+			height: 100%;
 		}
 	}
 }
 
 .main-top__swiper-text {
 	position: absolute;
-	width: 568px;
+	max-width: 568px;
 	overflow: hidden;
 	top: 37.6%;
 	left: 18.2%;
 	color: white;
 	z-index: 10;
 	@media (max-width: 1024px) {
-		width: 440px;
+		max-width: 440px;
 		top: 40%;
 		left: 15.5%;
 	}
 	@media (max-width: 768px) {
-		width: 290px;
+		max-width: 290px;
+		top: 30%;
 		left: 16.1%;
 	}
 	@media (max-width: 377px) {
@@ -265,53 +257,5 @@
 	@media (max-width: 377px) {
 		right: 5.3%;
 		bottom: 4.4%;
-	}
-}
-
-.main-top__mobile-toolbar {
-	display: none;
-	@media (max-width: 377px) {
-		display: block;
-	}
-}
-
-.main-top__mobile-toolbar {
-	height: 56px;
-	padding-top: 16px;
-	padding-bottom: 16px;
-	padding-right: 19px;
-	padding-left: 26px;
-}
-
-// toolbar (make toolbar a component *)
-
-.toolbar {
-	display: flex;
-	align-items: center;
-	gap: 0 61px;
-	.toolbar__buttons-block {
-		display: flex;
-		align-items: center;
-		gap: 0 66px;
-		.toolbar__icon {
-			width: 12px;
-			height: 24px;
-			fill: #2e7cf6;
-		}
-	}
-	.swiper-button-disabled {
-		.toolbar__icon {
-			fill: #cecece;
-		}
-	}
-	.toolbar__swiper {
-		max-width: 202px;
-		height: 24px;
-		overflow: hidden;
-		.toolbar__icon {
-			width: 24px;
-			height: 24px;
-			fill: #2e7cf6;
-		}
 	}
 }
