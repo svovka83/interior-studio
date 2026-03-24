@@ -1,0 +1,214 @@
+.cascade-pictures {
+	position: relative;
+	text-align: start;
+	height: 367px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 177px;
+	z-index: 10;
+	@media (max-width: 1024px) {
+		min-height: 339px;
+		text-align: center;
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+		margin-top: 138px;
+	}
+	@media (max-width: 768px) {
+		margin-top: 121px;
+	}
+	@media (max-width: 377px) {
+		margin-top: 97px;
+		text-align: start;
+	}
+	.cascade-pictures__title {
+		max-width: 424px;
+		line-height: 1.42;
+		@media (max-width: 1024px) {
+			text-wrap: balance;
+		}
+		@media (max-width: 377px) {
+			line-height: 31.5px;
+		}
+	}
+	.cascade-pictures__content {
+		width: 339px;
+		align-self: flex-end;
+		z-index: 20;
+		@media (max-width: 1024px) {
+			width: unset;
+			max-width: 447px;
+			align-self: center;
+			margin-top: 25px;
+		}
+		@media (max-width: 377px) {
+			margin-top: 20px;
+		}
+		.cascade-pictures__text {
+			font-size: 14px;
+			line-height: 171%;
+			color: white;
+			opacity: 0.7;
+			margin-bottom: 44px;
+			@media (max-width: 1024px) {
+				margin-bottom: 67px;
+			}
+			@media (max-width: 768px) {
+				margin-bottom: 51px;
+			}
+			@media (max-width: 377px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+	.cascade-pictures__img-1 {
+		position: absolute;
+		top: -18%;
+		left: 58.9%;
+		z-index: 10;
+		transition: transform 0.3s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			transform: rotate(10.5deg);
+			z-index: 15;
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+	.cascade-pictures__img-2 {
+		position: absolute;
+		top: -5.7%;
+		left: 54.6%;
+		z-index: 9;
+		transition: transform 0.3s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			transform: rotate(1.72deg);
+			z-index: 15;
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+	.cascade-pictures__img-3 {
+		position: absolute;
+		top: -1.7%;
+		left: 48.6%;
+		z-index: 8;
+		transition: transform 0.3s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			transform: rotate(5.81deg);
+			z-index: 15;
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+	.cascade-pictures__img-4 {
+		position: absolute;
+		top: 4.6%;
+		left: 45.1%;
+		z-index: 7;
+		transition: transform 0.3s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			transform: rotate(0.33deg);
+			z-index: 15;
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+	.cascade-pictures__img-5 {
+		position: absolute;
+		top: 4.9%;
+		left: 39%;
+		z-index: 6;
+		transition: transform 0.3s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			transform: rotate(5.59deg);
+			z-index: 15;
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+	.cascade-pictures__img-6 {
+		position: absolute;
+		top: 7.2%;
+		left: 34.8%;
+		z-index: 5;
+		transition: transform 0.3s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			transform: rotate(10.5deg);
+			z-index: 15;
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+	.cascade-pictures__img-7 {
+		position: absolute;
+		top: 19.5%;
+		left: 30.6%;
+		z-index: 4;
+		transition: transform 0.3s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			transform: rotate(1.72deg);
+			z-index: 15;
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+	.cascade-pictures__img-8 {
+		position: absolute;
+		top: 23.4%;
+		left: 24.5%;
+		z-index: 3;
+		transition: transform 0.3s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			transform: rotate(5.81deg);
+			z-index: 15;
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+	.cascade-pictures__img-9 {
+		position: absolute;
+		top: 29.8%;
+		left: 21%;
+		z-index: 2;
+		transition: transform 0.3s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			transform: rotate(0.33deg);
+			z-index: 15;
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+	.cascade-pictures__img-10 {
+		position: absolute;
+		top: 29.9%;
+		left: 14.9%;
+		z-index: 1;
+		transition: transform 0.3s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			transform: rotate(5.59deg);
+			z-index: 15;
+		}
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+}

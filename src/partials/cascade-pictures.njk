@@ -1,0 +1,30 @@
+{% macro cascadePictures() %}
+<section class="cascade-pictures container">
+	<div class="cascade-pictures__title">
+		<!-- title ( name, classTitle ) -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/title.njk" import title %}
+		{{ title("Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", "title_h2 title_light") }}
+	</div>
+	<div class="cascade-pictures__content">
+		<p class="cascade-pictures__text">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at
+			luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+		</p>
+		<!-- button (titleBtn, classButton) -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/button.njk" import button %}
+		{{ button("Make request", "button_dark button_whitefull") }}
+	</div>
+	<img class="cascade-pictures__img-1" src="/images/cascade-pictures/cascade-1.png" alt="cascade background" />
+	<img class="cascade-pictures__img-2" src="/images/cascade-pictures/cascade-2.png" alt="cascade background" />
+	<img class="cascade-pictures__img-3" src="/images/cascade-pictures/cascade-3.png" alt="cascade background" />
+	<img class="cascade-pictures__img-4" src="/images/cascade-pictures/cascade-4.png" alt="cascade background" />
+	<img class="cascade-pictures__img-5" src="/images/cascade-pictures/cascade-5.png" alt="cascade background" />
+	<img class="cascade-pictures__img-6" src="/images/cascade-pictures/cascade-6.png" alt="cascade background" />
+	<img class="cascade-pictures__img-7" src="/images/cascade-pictures/cascade-7.png" alt="cascade background" />
+	<img class="cascade-pictures__img-8" src="/images/cascade-pictures/cascade-8.png" alt="cascade background" />
+	<img class="cascade-pictures__img-9" src="/images/cascade-pictures/cascade-9.png" alt="cascade background" />
+	<img class="cascade-pictures__img-10" src="/images/cascade-pictures/cascade-10.png" alt="cascade background" />
+</section>
+{% endmacro %}

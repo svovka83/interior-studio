@@ -333,29 +333,10 @@
 					</div>
 				</div>
 			</div>
-			<!-- it must be a component!!! -->
-			<section class="our-projects__bottom container">
-				<div class="our-projects__bottom-title">
-					<!-- title ( name, classTitle ) -->
-					<!-- prettier-ignore -->
-					{% from "src/partials/title.njk" import title %}
-					{{ title("Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", "title_h2 title_light") }}
-				</div>
-				<div class="our-projects__bottom-content">
-					<p class="our-projects__bottom-text">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
-						posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
-					</p>
-					<!-- button (titleBtn, classButton) -->
-					<!-- prettier-ignore -->
-					{% from "src/partials/button.njk" import button %}
-					{{ button("Make request", "button_dark button_whitefull") }}
-				</div>
-				<img
-					class="our-projects__bottom-bg"
-					src="/public/images/our-projects/cascade-bg.png"
-					alt="cascade background" />
-			</section>
+			<!-- cascade-pictures () -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/cascade-pictures.njk" import cascadePictures %}
+			{{ cascadePictures() }}
 		</section>
 
 		<!-- above footer -->
