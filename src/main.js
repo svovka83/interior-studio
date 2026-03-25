@@ -58,9 +58,22 @@ selects.forEach((select) => {
 // one news slider
 
 new Swiper(".one-news-swiper", {
-	slidesPerView: 3,
-	spaceBetween: 48,
+	slidesPerView: "auto",
 	speed: 700,
+	breakpoints: {
+		321: {
+			spaceBetween: 26,
+		},
+		651: {
+			spaceBetween: 20,
+		},
+		901: {
+			spaceBetween: 40,
+		},
+		1101: {
+			spaceBetween: 48,
+		},
+	},
 });
 
 // main-swiper

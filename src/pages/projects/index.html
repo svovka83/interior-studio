@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Projects</title>
+	</head>
+	<body>
+		<!-- header ( classHeader, classLogo, classMenu, classLang, classBurgerMenu, classBurgerIcon, classButton ) -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/header.njk" import header %}
+		{{ header("header_whitefull", "logo_whitefull", "menu_whitefull", "lang_whitefull", "burger-menu_whitefull", "burger-menu__icon_whitefull",
+		"button_dark button_whitefull-border button_header-off") }}
+
+		<!-- burger-menu-screen () -->
+		<!-- prettier-ignore -->
+		{% from "./src/partials/burger-menu.njk" import burgerMenu %}
+		{{ burgerMenu() }}
+
+		<!-- news top -->
+		<section class="projects-top responsive-container" id="go-to-top">
+			<div class="projects-top__title">
+				<!-- title ( name, classTitle ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/title.njk" import title %}
+				{{ title("Our Projects", "title_h2 title_dark") }}
+			</div>
+			<div class="projects-top__content">
+				<div class="projects-top__text">
+					<!-- text ( text, classText ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/text.njk" import text %}
+          {{ text( "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.", "text_light" ) }}
+				</div>
+				<div class="projects-top__submenu">
+					<!-- submenu ( ( link1, linkPath1, link2, linkPath2, link3, linkPath3, link4, linkPath4, classSubmenu ) ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/submenu.njk" import submenu %}
+          {{ submenu("House", "#!", "Apartments", "#!", "Commerce", "#!", "Architecture", "#!", "submenu_project") }}
+				</div>
+				<div class="projects-top__dropdown">
+					<!-- dropdown (value, option1, option2, option3, classControl, classPointer, classChevron, classDropdown, classOption) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/dropdown.njk" import dropdown %}
+          {{ dropdown("Apartments", "Studio", "One-bedroom", "Mansion", "select__control_dark", "select__map-pointer_dark", "select__chevron_dark", "select__dropdown_dark", "select__option_dark") }}
+				</div>
+			</div>
+		</section>
+
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>

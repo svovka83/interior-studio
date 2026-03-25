@@ -46,6 +46,10 @@
 @use "./pages/one-news/one-news-content.scss";
 @use "./pages/one-news/one-news-slider.scss";
 
+// projects
+
+@use "./pages/projects/projects-top.scss";
+
 // for slider
 
 @import "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css";

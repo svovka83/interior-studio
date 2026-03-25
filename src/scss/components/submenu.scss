@@ -26,4 +26,12 @@
 		letter-spacing: 6%;
 		color: #828282;
 	}
+	&_project {
+		.submenu__link {
+			letter-spacing: 0;
+		}
+		@media (max-width: 1024px) {
+			gap: 0 34px;
+		}
+	}
 }
