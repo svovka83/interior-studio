@@ -17,7 +17,7 @@
 		{% from "./src/partials/burger-menu.njk" import burgerMenu %}
 		{{ burgerMenu() }}
 
-		<!-- news top -->
+		<!-- projects top -->
 		<section class="projects-top responsive-container" id="go-to-top">
 			<div class="projects-top__title">
 				<!-- title ( name, classTitle ) -->
@@ -46,6 +46,92 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- projects content -->
+		<div class="projects-content">
+			<div class="our-container">
+				<div class="projects-content__grid">
+					<!-- projectCard ( classCard, name, classTitle, classBottom, pathDesktop, pathLaptop, pathTablet, pathMobile ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/project-card.njk" import projectCard %}
+					{{ projectCard(
+						"project-card_normal",
+						"Eyewear store interior",
+						"title_card",
+						"project-card__title-block_normal",
+						"/images/our-projects/project-1_1440.jpg",
+						"/images/our-projects/project-1_1024.jpg",
+						"/images/our-projects/project-1_768.jpg",
+						"/images/our-projects/project-1_377.jpg") }}
+					<!-- prettier-ignore -->
+					{% from "src/partials/project-card.njk" import projectCard %}
+					{{ projectCard(
+						"project-card_normal",
+						"Minimalist style home",
+						"title_card",
+						"project-card__title-block_normal",
+						"/images/our-projects/project-2_1440.jpg",
+						"/images/our-projects/project-2_1024.jpg",
+						"/images/our-projects/project-2_768.jpg",
+						"/images/our-projects/project-2_377.jpg") }}
+					<!-- prettier-ignore -->
+					{% from "src/partials/project-card.njk" import projectCard %}
+					{{ projectCard(
+						"project-card_full",
+						"Residence by the lighthouse",
+						"title_card",
+						"project-card__title-block_full",
+						"/images/our-projects/project-3_1440.jpg",
+						"/images/our-projects/project-3_1024.jpg",
+						"/images/our-projects/project-3_768.jpg",
+						"/images/our-projects/project-3_377.jpg") }}
+					<!-- prettier-ignore -->
+					{% from "src/partials/project-card.njk" import projectCard %}
+					{{ projectCard(
+						"project-card_normal",
+						"Eyewear store interior",
+						"title_card",
+						"project-card__title-block_normal",
+						"/images/our-projects/project-4_1440.jpg",
+						"/images/our-projects/project-4_1024.jpg",
+						"/images/our-projects/project-2_768.jpg",
+						"/images/our-projects/project-4_377.jpg") }}
+					<!-- prettier-ignore -->
+					{% from "src/partials/project-card.njk" import projectCard %}
+					{{ projectCard(
+						"project-card_normal",
+						"Eyewear store interior",
+						"title_card",
+						"project-card__title-block_normal",
+						"/images/our-projects/project-5_1440.jpg",
+						"/images/our-projects/project-5_1024.jpg",
+						"/images/our-projects/project-5_768.jpg",
+						"/images/our-projects/project-5_375.jpg") }}
+					<!-- prettier-ignore -->
+					{% from "src/partials/project-card.njk" import projectCard %}
+					{{ projectCard(
+						"project-card_full",
+						"Residence by the lighthouse",
+						"title_card",
+						"project-card__title-block_full",
+						"/images/our-projects/project-6_1440.jpg",
+						"/images/our-projects/project-6_1024.jpg",
+						"/images/our-projects/project-6_768.jpg",
+						"/images/our-projects/project-6_375.jpg") }}
+				</div>
+			</div>
+			<!-- cascade-pictures ( classTitle, classText, classButton ) -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/cascade-pictures.njk" import cascadePictures %}
+			{{ cascadePictures( "title_h2 title_dark", "text_light", "button_dark button_whitefull-border" ) }}
+		</div>
+
+		<!-- projects footer -->
+		<footer class="projects-footer">
+			<!-- prettier-ignore -->
+			{% from "src/partials/footer-bottom.njk" import footerBottom %}
+			{{ footerBottom( "footer-bottom__icon_secondary" ) }}
+		</footer>
 
 		<script type="module" src="/src/main.js"></script>
 	</body>

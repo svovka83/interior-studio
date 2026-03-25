@@ -45,11 +45,17 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 8px;
+	margin-bottom: 177px;
 	@media (max-width: 1439px) {
 		gap: 6px;
+		margin-bottom: 138px;
 	}
 	@media (max-width: 1023px) {
 		grid-template-columns: 1fr;
+		margin-bottom: 121px;
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 97px;
 	}
 	div:nth-child(3) {
 		grid-column: 1 / 3;

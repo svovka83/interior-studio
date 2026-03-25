@@ -15,11 +15,13 @@
 		{% from "src/partials/discover-more.njk" import discover %}
 		{{ discover("discover_light") }}
 	</div>
-	<picture class="project-card__picture">
-		<source srcset="{{pathMobile}}" media="(max-width: 767px)" />
-		<source srcset="{{pathTablet}}" media="(max-width: 1023px)" />
-		<source srcset="{{pathLaptop}}" media="(max-width: 1439px)" />
-		<img class="project-card__img" src="{{ pathDesktop }}" alt="project card image" />
-	</picture>
+	<a href="/interior-studio/src/pages/one-project/">
+		<picture class="project-card__picture">
+			<source srcset="{{pathMobile}}" media="(max-width: 767px)" />
+			<source srcset="{{pathTablet}}" media="(max-width: 1023px)" />
+			<source srcset="{{pathLaptop}}" media="(max-width: 1439px)" />
+			<img class="project-card__img" src="{{ pathDesktop }}" alt="project card image" />
+		</picture>
+	</a>
 </div>
 {% endmacro %}

@@ -245,7 +245,7 @@
 						"project-card__title-block_full",
 						"/images/our-projects/project-3_1440.jpg",
 						"/images/our-projects/project-3_1024.jpg",
-						"/images/our-projects/project-3_768.jpg",
+						"/images/our-projects/project-5_768.jpg",
 						"/images/our-projects/project-3_377.jpg") }}
 					<!-- prettier-ignore -->
 					{% from "src/partials/project-card.njk" import projectCard %}
@@ -268,7 +268,7 @@
 						"",
 						"",
 						"",
-						"/images/our-projects/project-5_377.jpg") }}
+						"/images/our-projects/project-5_375.jpg") }}
 					<div class="our-projects__card-more">
 						<!-- title ( name, classTitle ) -->
 						<!-- prettier-ignore -->
@@ -286,10 +286,10 @@
 					</div>
 				</div>
 			</div>
-			<!-- cascade-pictures () -->
+			<!-- cascade-pictures ( classTitle, classText, classButton ) -->
 			<!-- prettier-ignore -->
 			{% from "src/partials/cascade-pictures.njk" import cascadePictures %}
-			{{ cascadePictures() }}
+			{{ cascadePictures( "title_h2 title_light", "text_white", "button_dark button_whitefull" ) }}
 		</section>
 
 		<!-- above footer -->
