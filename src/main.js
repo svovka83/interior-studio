@@ -1,7 +1,12 @@
 import "./scss/styles.scss";
+
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 // burger-menu
+
+// const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+// const enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
 const burgerBtn = document.querySelectorAll(".burger-menu");
 const burgerMenu = document.querySelectorAll(".burger-menu-screen");
@@ -9,7 +14,14 @@ const burgerMenu = document.querySelectorAll(".burger-menu-screen");
 burgerBtn.forEach((btn) => {
 	btn.addEventListener("click", () => {
 		burgerMenu.forEach((menu) => {
-			menu.classList.toggle("burger-menu-screen_active");
+			// menu.classList.toggle("burger-menu-screen_active");
+			if (!menu.classList.contains("burger-menu-screen_active")) {
+				menu.classList.add("burger-menu-screen_active");
+				disableBodyScroll(document.body);
+			} else {
+				menu.classList.remove("burger-menu-screen_active");
+				enableBodyScroll(document.body);
+			}
 		});
 	});
 });
