@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>One project</title>
+	</head>
+	<body>
+		<!-- header ( classHeader, classLogo, classMenu, classLang, classBurgerMenu, classBurgerIcon, classButton ) -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/header.njk" import header %}
+		{{ header("header_transparent", "logo_transparent", "menu_transparent", "lang_transparent", "", "burger-menu__icon_transparent",
+		"button_light button_transparent-border button_header-off") }}
+
+		<!-- burger-menu-screen () -->
+		<!-- prettier-ignore -->
+		{% from "./src/partials/burger-menu.njk" import burgerMenu %}
+		{{ burgerMenu() }}
+
+		<!-- one-project-top -->
+		<section class="one-project-top">
+			<div class="one-project-top__content responsive-container">
+				<div class="one-project-top__title">
+					<!-- title ( name, classTitle ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/title.njk" import title %}
+          {{ title("Residence by the lighthouse", "title_h2 title_light") }}
+				</div>
+				<div class="one-project-top__text">
+					<!-- text ( text, classText ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/text.njk" import text %}
+          {{ text( "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.", "text_white" ) }}
+				</div>
+				<div class="one-project-top__info">
+					<div class="one-project-top__info-block">
+						<svg class="one-project-top__info-icon">
+							<use xlink:href="/images/icons.svg#info-location"></use>
+						</svg>
+						<p class="one-project-top__info-text">Lodz, Poland</p>
+					</div>
+					<div class="one-project-top__info-block">
+						<svg class="one-project-top__info-icon">
+							<use xlink:href="/images/icons.svg#info-calendar"></use>
+						</svg>
+						<p class="one-project-top__info-text">16.10.2018</p>
+					</div>
+					<div class="one-project-top__info-block">
+						<svg class="one-project-top__info-icon">
+							<use xlink:href="/images/icons.svg#info-equipment"></use>
+						</svg>
+						<p class="one-project-top__info-text">80 sq.m</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="one-project-top__sotials our-container">
+				<!-- sotials ( classSotials, classTitle, icon1, icon2, icon3, icon4 ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/sotials.njk" import sotials %}
+        {{ sotials( "sotials_in-row", "sotials__title_white", "facebook-pale.png", "twitter-pale.png", "linkedin-pale.png", "attach-pale.png" ) }}
+			</div>
+
+			<picture class="one-project-top__picture">
+				<source srcset="/images/top-backgrounds/one-project_375.jpg" media="(max-width: 375px)" />
+				<source srcset="/images/top-backgrounds/one-project_768.jpg" media="(max-width: 768px)" />
+				<source srcset="/images/top-backgrounds/one-project_1024.jpg" media="(max-width: 1024px)" />
+				<img
+					class="one-project-top__bg"
+					src="/images/top-backgrounds/one-project_1440.jpg"
+					alt="one project image" />
+			</picture>
+		</section>
+
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>

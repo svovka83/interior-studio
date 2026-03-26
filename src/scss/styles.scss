@@ -52,6 +52,10 @@
 @use "./pages/projects/projects-content.scss";
 @use "./pages/projects/projects-footer.scss";
 
+// one-project-top
+
+@use "./pages/one-project/one-project-top.scss";
+
 // for slider
 
 @import "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css";

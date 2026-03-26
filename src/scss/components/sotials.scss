@@ -1,9 +1,28 @@
 .sotials {
+	&_in-row {
+		display: flex;
+		align-items: center;
+		gap: 0 111px;
+		@media (max-width: 1024px) {
+			gap: 0 59px;
+		}
+		@media (max-width: 768px) {
+			gap: 0 32px;
+		}
+		@media (max-width: 420px) {
+			gap: 0 16px;
+		}
+	}
 	.sotials__title {
 		font-weight: 500;
 		line-height: 171%;
-		color: #080808;
-		margin-bottom: 12px;
+		&_white {
+			color: #ffffff;
+		}
+		&_dark {
+			color: #080808;
+			margin-bottom: 12px;
+		}
 	}
 	.sotials__list {
 		display: flex;

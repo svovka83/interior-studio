@@ -13,6 +13,7 @@ export default defineConfig({
 				news: resolve(__dirname, "src/pages/news/index.html"),
 				oneNews: resolve(__dirname, "src/pages/one-news/index.html"),
 				projects: resolve(__dirname, "src/pages/projects/index.html"),
+				oneProject: resolve(__dirname, "src/pages/one-project/index.html"),
 			},
 		},
 	},

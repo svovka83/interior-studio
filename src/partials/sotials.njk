@@ -1,25 +1,25 @@
-{% macro sotials() %}
-  <div class="sotials">
-		<h5 class="sotials__title">Share:</h5>
+{% macro sotials( classSotials, classTitle, icon1, icon2, icon3, icon4 ) %}
+  <div class="sotials {{classSotials}}">
+		<h5 class="sotials__title {{classTitle}}">Share:</h5>
 		<ul class="sotials__list">
 			<li class="sotials__item">
 				<a class="sotials__link" href="#!">
-					<img class="sotials__img" src="/images/sotials/facebook.png" alt="sotials" />
+					<img class="sotials__img" src="/images/sotials/{{icon1}}" alt="sotials" />
 				</a>
 			</li>
 			<li class="sotials__item">
 				<a class="sotials__link" href="#!">
-					<img class="sotials__img" src="/images/sotials/twitter.png" alt="sotials" />
+					<img class="sotials__img" src="/images/sotials/{{icon2}}" alt="sotials" />
 				</a>
 			</li>
 			<li class="sotials__item">
 				<a class="sotials__link" href="#!">
-					<img class="sotials__img" src="/images/sotials/linkedin.png" alt="sotials" />
+					<img class="sotials__img" src="/images/sotials/{{icon3}}" alt="sotials" />
 				</a>
 			</li>
 			<li class="sotials__item">
 				<a class="sotials__link" href="#!">
-					<img class="sotials__img" src="/images/sotials/attach.png" alt="sotials" />
+					<img class="sotials__img" src="/images/sotials/{{icon4}}" alt="sotials" />
 				</a>
 			</li>
 		</ul>
