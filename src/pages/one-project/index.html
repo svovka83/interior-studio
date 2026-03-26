@@ -72,6 +72,71 @@
 			</picture>
 		</section>
 
+		<!-- one-project-quatation -->
+		<section class="one-project-quatation responsive-container">
+			<div class="one-project-quatation__title">
+				<!-- title ( name, classTitle ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/title.njk" import title %}
+        {{ title( "Donec et ipsum nec quam posuere maximus eu in erat. Duis laoreet finibus consectetur.",
+				"title_h4 title_dark") }}
+			</div>
+			<div class="one-project-quatation__text">
+				<!-- text ( text, classText ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/text.njk" import text %}
+				{{ text( "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida urna. Donec blandit sapien eu diam ullamcorper euismod. Nam tempus pellentesque ligula ut aliquam. Donec et ipsum nec quam posuere maximus eu in erat. Duis laoreet finibus consectetur. Nullam pulvinar ex sit amet leo gravida, sed mattis enim vehicula. Duis purus nisl, consectetur ut est non, placerat eleifend turpis. Duis auctor suscipit arcu. Aenean leo est, rutrum a eleifend eget, tempor nec urna. Proin finibus lobortis arcu dictum convallis. Ut fermentum eu magna vel laoreet. In lacus augue, malesuada id elit sit amet, varius imperdiet ex. Nullam blandit lobortis posuere:", "text_light" ) }}
+			</div>
+			<div class="one-project-quatation__discover">
+				<!-- discover (classText) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/discover-more.njk" import discover %}
+				{{ discover("discover_dark") }}
+			</div>
+		</section>
+
+		<!-- one-project-img -->
+		<div class="one-project-content">
+			<div class="one-project-grid img-container">
+				<picture class="one-project-img__picture">
+					<source srcset="/images/one-item-pictures/one-item-1_375-project.jpg" media="(max-width: 420px)" />
+					<source srcset="/images/one-item-pictures/one-item-1_768.jpg" media="(max-width: 768px)" />
+					<source srcset="/images/one-item-pictures/one-item-1_1024.jpg" media="(max-width: 1024px)" />
+					<img
+						class="one-project-img__img"
+						src="/images/one-item-pictures/one-item-1_1440.jpg"
+						alt="one project image" />
+				</picture>
+				<picture class="one-project-img__picture">
+					<source srcset="/images/one-item-pictures/one-item-5_375.jpg" media="(max-width: 420px)" />
+					<source srcset="/images/one-item-pictures/one-item-5_768.jpg" media="(max-width: 768px)" />
+					<source srcset="/images/one-item-pictures/one-item-5_1024.jpg" media="(max-width: 1024px)" />
+					<img
+						class="one-project-img__img"
+						src="/images/one-item-pictures/one-item-5_1440.jpg"
+						alt="one project image" />
+				</picture>
+				<picture class="one-project-img__picture">
+					<source srcset="/images/one-item-pictures/one-item-6_375.jpg" media="(max-width: 420px)" />
+					<source srcset="/images/one-item-pictures/one-item-6_768.jpg" media="(max-width: 768px)" />
+					<source srcset="/images/one-item-pictures/one-item-6_1024.jpg" media="(max-width: 1024px)" />
+					<img
+						class="one-project-img__img"
+						src="/images/one-item-pictures/one-item-6_1440.jpg"
+						alt="one project image" />
+				</picture>
+				<picture class="one-project-img__picture">
+					<source srcset="/images/one-item-pictures/one-item-2_375-project.jpg" media="(max-width: 420px)" />
+					<source srcset="/images/one-item-pictures/one-item-2_768.jpg" media="(max-width: 768px)" />
+					<source srcset="/images/one-item-pictures/one-item-2_1024.jpg" media="(max-width: 1024px)" />
+					<img
+						class="one-project-img__img"
+						src="/images/one-item-pictures/one-item-2_1440.jpg"
+						alt="one project image" />
+				</picture>
+			</div>
+		</div>
+
 		<script type="module" src="/src/main.js"></script>
 	</body>
 </html>

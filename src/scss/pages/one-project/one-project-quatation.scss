@@ -1,0 +1,32 @@
+.one-project-quatation {
+	padding-top: 139px;
+	padding-bottom: 141px;
+	@media (max-width: 1024px) {
+		padding-top: 123px;
+		padding-bottom: 124px;
+	}
+	@media (max-width: 768px) {
+		padding-top: 103px;
+		padding-bottom: 104px;
+	}
+	@media (max-width: 420px) {
+		padding-top: 79px;
+		padding-bottom: 80px;
+	}
+	.one-project-quatation__title {
+		max-width: 419px;
+		margin-bottom: 15px;
+		@media (max-width: 768px) {
+			margin-bottom: 22px;
+		}
+	}
+	.one-project-quatation__text {
+		max-width: 715px;
+		margin-bottom: 46px;
+		@media (max-width: 1024px) {
+			max-width: 600px;
+		}
+	}
+	.one-project-quatation__discover {
+	}
+}

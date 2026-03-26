@@ -45,12 +45,12 @@
 		<!-- one-news-img -->
 		<div class="one-news-img img-container">
 			<picture class="one-news-img__picture">
-				<source srcset="/images/one-news-pictures/one-news-1_375.jpg" media="(max-width: 420px)" />
-				<source srcset="/images/one-news-pictures/one-news-1_768.jpg" media="(max-width: 768px)" />
-				<source srcset="/images/one-news-pictures/one-news-1_1024.jpg" media="(max-width: 1024px)" />
+				<source srcset="/images/one-item-pictures/one-item-1_375-news.jpg" media="(max-width: 420px)" />
+				<source srcset="/images/one-item-pictures/one-item-1_768.jpg" media="(max-width: 768px)" />
+				<source srcset="/images/one-item-pictures/one-item-1_1024.jpg" media="(max-width: 1024px)" />
 				<img
 					class="one-news-img__img"
-					src="/images/one-news-pictures/one-news-1_1440.jpg"
+					src="/images/one-item-pictures/one-item-1_1440.jpg"
 					alt="one news image" />
 			</picture>
 		</div>
@@ -114,30 +114,30 @@
 		<!-- one-news-img -->
 		<div class="one-news-grid img-container">
 			<picture class="one-news-img__picture">
-				<source srcset="/images/one-news-pictures/one-news-2_375.jpg" media="(max-width: 420px)" />
-				<source srcset="/images/one-news-pictures/one-news-2_768.jpg" media="(max-width: 768px)" />
-				<source srcset="/images/one-news-pictures/one-news-2_1024.jpg" media="(max-width: 1024px)" />
+				<source srcset="/images/one-item-pictures/one-item-2_375-news.jpg" media="(max-width: 420px)" />
+				<source srcset="/images/one-item-pictures/one-item-2_768.jpg" media="(max-width: 768px)" />
+				<source srcset="/images/one-item-pictures/one-item-2_1024.jpg" media="(max-width: 1024px)" />
 				<img
 					class="one-news-img__img"
-					src="/images/one-news-pictures/one-news-2_1440.jpg"
+					src="/images/one-item-pictures/one-item-2_1440.jpg"
 					alt="one news image" />
 			</picture>
 			<picture class="one-news-img__picture">
-				<source srcset="/images/one-news-pictures/one-news-3_375.jpg" media="(max-width: 420px)" />
-				<source srcset="/images/one-news-pictures/one-news-3_768.jpg" media="(max-width: 768px)" />
-				<source srcset="/images/one-news-pictures/one-news-3_1024.jpg" media="(max-width: 1024px)" />
+				<source srcset="/images/one-item-pictures/one-item-3_375.jpg" media="(max-width: 420px)" />
+				<source srcset="/images/one-item-pictures/one-item-3_768.jpg" media="(max-width: 768px)" />
+				<source srcset="/images/one-item-pictures/one-item-3_1024.jpg" media="(max-width: 1024px)" />
 				<img
 					class="one-news-img__img"
-					src="/images/one-news-pictures/one-news-3_1440.jpg"
+					src="/images/one-item-pictures/one-item-3_1440.jpg"
 					alt="one news image" />
 			</picture>
 			<picture class="one-news-img__picture">
-				<source srcset="/images/one-news-pictures/one-news-4_375.jpg" media="(max-width: 420px)" />
-				<source srcset="/images/one-news-pictures/one-news-4_768.jpg" media="(max-width: 768px)" />
-				<source srcset="/images/one-news-pictures/one-news-4_1024.jpg" media="(max-width: 1024px)" />
+				<source srcset="/images/one-item-pictures/one-item-4_375.jpg" media="(max-width: 420px)" />
+				<source srcset="/images/one-item-pictures/one-item-4_768.jpg" media="(max-width: 768px)" />
+				<source srcset="/images/one-item-pictures/one-item-4_1024.jpg" media="(max-width: 1024px)" />
 				<img
 					class="one-news-img__img"
-					src="/images/one-news-pictures/one-news-4_1440.jpg"
+					src="/images/one-item-pictures/one-item-4_1440.jpg"
 					alt="one news image" />
 			</picture>
 		</div>
@@ -193,10 +193,10 @@
 
 		<!-- sotials (max-width: 1024px) -->
 		<div class="one-news-bottom__sotials responsive-container">
-			<!-- sotials () -->
+			<!-- sotials ( classSotials, classTitle, icon1, icon2, icon3, icon4 ) -->
 			<!-- prettier-ignore -->
 			{% from "src/partials/sotials.njk" import sotials %}
-			{{ sotials() }}
+      {{ sotials( "", "sotials__title_dark", "facebook.png", "twitter.png", "linkedin.png", "attach.png" ) }}
 		</div>
 
 		<!-- hr -->

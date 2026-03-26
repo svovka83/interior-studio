@@ -47,7 +47,10 @@
 			margin-bottom: 52px;
 		}
 		@media (max-width: 768px) {
-			margin-bottom: 35px;
+			margin-bottom: 36px;
+		}
+		@media (max-width: 420px) {
+			max-width: 320px;
 		}
 	}
 }
@@ -56,6 +59,11 @@
 	display: flex;
 	align-items: center;
 	gap: 0 31px;
+	@media (max-width: 420px) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px 0;
+	}
 	.one-project-top__info-block {
 		height: 51px;
 		display: flex;
@@ -94,9 +102,14 @@
 		margin-left: auto;
 	}
 	@media (max-width: 768px) {
+		margin-top: 0;
 		position: absolute;
 		left: 0;
 		bottom: 32px;
+	}
+	@media (max-width: 420px) {
+		left: 3px;
+		bottom: 23px;
 	}
 }
 
