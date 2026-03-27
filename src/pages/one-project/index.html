@@ -135,6 +135,12 @@
 						alt="one project image" />
 				</picture>
 			</div>
+			<div class="one-project-content__button">
+				<!-- button (titleBtn, classButton) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/button.njk" import button %}
+				{{ button("View more photo", "button_dark button_whitefull-border" ) }}
+			</div>
 		</div>
 
 		<script type="module" src="/src/main.js"></script>
