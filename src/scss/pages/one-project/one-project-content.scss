@@ -5,7 +5,16 @@
 }
 
 .one-project-content {
-	margin-bottom: 100px;
+	margin-bottom: 140px;
+	@media (max-width: 1440px) {
+		margin-bottom: 124px;
+	}
+	@media (max-width: 768px) {
+		margin-bottom: 104px;
+	}
+	@media (max-width: 420px) {
+		margin-bottom: 80px;
+	}
 }
 
 .one-project-grid {
@@ -26,5 +35,16 @@
 
 .one-project-content__button {
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 79px;
+	@media (max-width: 1440px) {
+		margin-top: 64px;
+	}
+	@media (max-width: 768px) {
+		margin-top: 56px;
+		margin-right: 8px;
+	}
+	@media (max-width: 420px) {
+		margin-top: 48px;
+		margin-right: 0;
+	}
 }

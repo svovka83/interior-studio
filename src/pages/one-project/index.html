@@ -95,7 +95,7 @@
 			</div>
 		</section>
 
-		<!-- one-project-img -->
+		<!-- one-project-content -->
 		<div class="one-project-content">
 			<div class="one-project-grid img-container">
 				<picture class="one-project-img__picture">
@@ -139,9 +139,39 @@
 				<!-- button (titleBtn, classButton) -->
 				<!-- prettier-ignore -->
 				{% from "src/partials/button.njk" import button %}
-				{{ button("View more photo", "button_dark button_whitefull-border" ) }}
+				{{ button("View more photo", "button_dark button_whitefull-without-changes" ) }}
 			</div>
 		</div>
+
+		<footer class="one-project-footer">
+			<!-- cascade-pictures ( classTitle, classText, classButton ) -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/cascade-pictures.njk" import cascadePictures %}
+			{{ cascadePictures( "title_h2 title_light", "text_white", "button_dark button_whitefull" ) }}
+			<div class="one-project-footer__subtitle">
+				<!-- title ( name, classTitle ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/title.njk" import title %}
+        {{ title( "Next project", "title_h5 title_gray") }}
+			</div>
+			<div class="one-project-footer__title">
+				<!-- title ( name, classTitle ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/title.njk" import title %}
+        {{ title( "Perfect proportions", "title_h2 title_light") }}
+			</div>
+			<div class="img-container">
+				<picture class="one-project-footer__picture">
+					<source srcset="/images/footers/one-project-footer_375.jpg" media="(max-width: 420px)" />
+					<source srcset="/images/footers/one-project-footer_768.jpg" media="(max-width: 768px)" />
+					<source srcset="/images/footers/one-project-footer_1024.jpg" media="(max-width: 1024px)" />
+					<img
+						class="one-project-footer__img"
+						src="/images/footers/one-project-footer_1440.jpg"
+						alt="one project image" />
+				</picture>
+			</div>
+		</footer>
 
 		<script type="module" src="/src/main.js"></script>
 	</body>
