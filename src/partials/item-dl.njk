@@ -1,0 +1,9 @@
+{% macro itemDL( term, definitionTop, definitionBottom ) %}
+  <div class="description-item">
+    <dt class="description-term">{{term}}</dt>
+    <dd class="description-definition">
+      <p>{{definitionTop}}</p>
+      <p>{{definitionBottom}}</p>
+    </dd>
+  </div>
+{% endmacro %}

@@ -1,0 +1,30 @@
+{% macro aboveFooter( classBg, classTitle, classText ) %}
+  <section class="above-footer {{classBg}}">
+    <div class="above-footer__inner container-big">
+      <div class="above-footer__content">
+        <!-- title ( name, classTitle ) -->
+        <!-- prettier-ignore -->
+        {% from "src/partials/title.njk" import title %}
+        {{ title("@lorem.ipsum", classTitle) }}
+
+        <div class="above-footer__text">
+          <!-- text ( text, classText ) -->
+		      <!-- prettier-ignore -->
+		      {% from "src/partials/text.njk" import text %}
+          {{ text( "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
+          posuere.", classText ) }}
+        </div>
+
+      </div>
+      <picture class="above-footer__picture">
+        <source srcset="/images/above-footer/above-footer_377.png" media="(max-width: 377px)" />
+        <source srcset="/images/above-footer/above-footer_768.png" media="(max-width: 768px)" />
+        <source srcset="/images/above-footer/above-footer_1024.png" media="(max-width: 1024px)" />
+        <img
+          class="above-footer__img"
+          src="/images/above-footer/above-footer_1440.png"
+          alt="see more cards" />
+      </picture>
+    </div>
+  </section>
+{% endmacro %}

@@ -285,30 +285,10 @@
 			{{ cascadePictures( "title_h2 title_light", "text_white", "button_dark button_whitefull" ) }}
 		</section>
 
-		<!-- above footer -->
-		<section class="above-footer">
-			<div class="above-footer__inner container-big">
-				<div class="above-footer__content">
-					<!-- title ( name, classTitle ) -->
-					<!-- prettier-ignore -->
-					{% from "src/partials/title.njk" import title %}
-					{{ title("@lorem.ipsum", "title_h1 title_dark") }}
-					<p class="above-footer__subtext">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
-						posuere.
-					</p>
-				</div>
-				<picture class="above-footer__picture">
-					<source srcset="/images/above-footer/above-footer_377.png" media="(max-width: 377px)" />
-					<source srcset="/images/above-footer/above-footer_768.png" media="(max-width: 768px)" />
-					<source srcset="/images/above-footer/above-footer_1024.png" media="(max-width: 1024px)" />
-					<img
-						class="above-footer__img"
-						src="/images/above-footer/above-footer_1440.png"
-						alt="see more cards" />
-				</picture>
-			</div>
-		</section>
+		<!-- aboveFooter ( classBg, classTitle, classText ) -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/above-footer.njk" import aboveFooter %}
+    {{ aboveFooter( "above-footer_light", "title_h1 title_dark", "text_light" ) }}
 
 		<!-- footer -->
 		<footer class="footer-main">

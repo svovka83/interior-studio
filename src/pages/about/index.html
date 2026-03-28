@@ -31,7 +31,7 @@
 						<!-- text ( text, classText ) -->
 						<!-- prettier-ignore -->
 						{% from "src/partials/text.njk" import text %}
-					{{ text( "The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles and architecture. ", "text_white" ) }}
+						{{ text( "The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles and architecture. ", "text_white" ) }}
 					</div>
 				</div>
 				<img
@@ -100,9 +100,95 @@
 					</div>
 				</div>
 				<div class="about-slider-bottom">
-					<!-- I will continue from this point tomorrow -->
+					<img
+						class="about-slider-bottom__left-img"
+						src="/public/images/about-content/philosophy-big.jpg"
+						alt="company philosophy image" />
+					<div class="about-slider-bottom__content">
+						<dl class="about-slider-bottom__description-list">
+							<!-- itemDL ( term, definitionTop, definitionBottom ) -->
+							<!-- prettier-ignore -->
+							{% from "src/partials/item-dl.njk" import itemDL %}
+							{{ itemDL( "6", "years", "expertise" ) }}
+							{{ itemDL( "100+", "completed", "projects" ) }}
+							{{ itemDL( "25+", "companies", "cooperate" ) }}
+							{{ itemDL( "2014", "year of", "market entry" ) }}
+						</dl>
+						<div class="about-slider-bottom__text">
+							<!-- text ( text, classText ) -->
+							<!-- prettier-ignore -->
+							{% from "src/partials/text.njk" import text %}
+							{{ text( "The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles and architecture. ", "text_light" ) }}
+						</div>
+						<img
+							class="about-slider-bottom__right-img"
+							src="/public/images/about-content/philosophy-small.jpg"
+							alt="company philosophy image" />
+					</div>
 				</div>
 			</section>
+
+			<!-- about-content-section -->
+			<section class="about-content container-big">
+				<div class="about-content-top">
+					<div class="about-content-top__content">
+						<div class="about-content-top__title">
+							<!-- title ( name, classTitle ) -->
+							<!-- prettier-ignore -->
+							{% from "src/partials/title.njk" import title %}
+							{{ title( "Roman Viktorovich", "title_h2 title_dark") }}
+						</div>
+						<div class="about-content-top__subtitle">
+							<!-- title ( name, classTitle ) -->
+							<!-- prettier-ignore -->
+							{% from "src/partials/title.njk" import title %}
+							{{ title( "Founder and CEO of Hilight", "title_h4 title_dark") }}
+						</div>
+						<div class="about-content-top__qutation">
+							<svg class="about-content-top__icon">
+								<use xlink:href="/images/icons.svg#quotes-icon"></use>
+							</svg>
+							<div class="about-content-top__text">
+								<!-- text ( text, classText ) -->
+								<!-- prettier-ignore -->
+								{% from "src/partials/text.njk" import text %}
+								{{ text( "We can also help you create harmony out of seemingly completely incompatible elements in the interior or the exterior design. ", "text_light text_large" ) }}
+							</div>
+						</div>
+					</div>
+					<img
+						class="about-content-top__img"
+						src="/images/about-content/content-big.jpg"
+						alt="about content top image" />
+				</div>
+				<div class="about-content-bottom">
+					<img
+						class="about-content-bottom__img"
+						src="/images/about-content/content-small.jpg"
+						alt="about content bottom image" />
+					<div class="about-content-bottom__content">
+						<dl class="about-content-bottom__dl">
+							<!-- itemDL ( term, definitionTop, definitionBottom ) -->
+							<!-- prettier-ignore -->
+							{% from "src/partials/item-dl.njk" import itemDL %}
+							{{ itemDL( "5", "companies", "cooperate" ) }}
+							{{ itemDL( "4", "year of", "market entry" ) }}
+							{{ itemDL( "3", "companies", "cooperate" ) }}
+						</dl>
+						<div class="about-content-bottom__text">
+							<!-- text ( text, classText ) -->
+							<!-- prettier-ignore -->
+							{% from "src/partials/text.njk" import text %}
+							{{ text( "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat nisl sit risus pharetra nisl metus aliquet. Nibh eu posuere sodales sem tellus. Vulputate est nisl convallis sed. Fames in dignissim erat fermentum sed sed. In massa, adipiscing aliquet mi semper facilisis ornare nisi. Non elit amet enim at cursus mauris senectus dolor ac. Egestas lectus in praesent mi arcu. Vitae nisl viverra enim nulla at. Fusce porta elementum quis.", "text_light" ) }}
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- aboveFooter ( classBg, classTitle, classText ) -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/above-footer.njk" import aboveFooter %}
+			{{ aboveFooter( "above-footer_dark", "title_h1 title_light", "text_white" ) }}
 		</main>
 
 		<script type="module" src="/src/main.js"></script>

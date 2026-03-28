@@ -1,5 +1,10 @@
 .above-footer {
-	background-color: #fafafa;
+	&_light {
+		background-color: #fafafa;
+	}
+	&_dark {
+		background-color: #080808;
+	}
 }
 
 .above-footer__inner {
@@ -30,9 +35,7 @@
 		width: 288px;
 		margin-top: 32px;
 	}
-	.above-footer__subtext {
-		line-height: 171%;
-		color: #080808;
+	.above-footer__text {
 		opacity: 0.7;
 		margin-top: 24px;
 		@media (max-width: 768px) {

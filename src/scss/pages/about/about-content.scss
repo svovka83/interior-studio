@@ -1,0 +1,123 @@
+.about-content {
+	padding-bottom: 66px;
+}
+
+.about-content-top {
+	padding-inline: 146px;
+	display: flex;
+	justify-content: flex-end;
+	gap: 0 132px;
+	padding-bottom: 106px;
+	@media (max-width: 1200px) {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 80px 0;
+		padding-inline: 24px;
+	}
+	@media (max-width: 1024px) {
+		padding-bottom: 124px;
+	}
+	@media (max-width: 768px) {
+		padding-bottom: 96px;
+	}
+	@media (max-width: 420px) {
+		padding-bottom: 64px;
+	}
+}
+
+.about-content-top__content {
+	margin-top: 70px;
+	@media (max-width: 1200px) {
+		margin-top: 0;
+	}
+	.about-content-top__title {
+		margin-left: 50px;
+		margin-bottom: 26px;
+		@media (max-width: 480px) {
+			margin-left: 34px;
+		}
+	}
+	.about-content-top__subtitle {
+		width: 167px;
+		margin-left: 50px;
+		margin-bottom: 50px;
+		@media (max-width: 480px) {
+			margin-left: 34px;
+		}
+	}
+	.about-content-top__qutation {
+		max-width: 433px;
+		display: grid;
+		grid-template-columns: 18px 1fr;
+		gap: 0 32px;
+		@media (max-width: 480px) {
+			gap: 0 16px;
+		}
+		.about-content-top__icon {
+			width: 18px;
+			height: 32px;
+			fill: #080808;
+		}
+		.about-content-top__text {
+			width: 383px;
+			opacity: 0.7;
+			@media (max-width: 480px) {
+				width: 270px;
+			}
+		}
+	}
+}
+
+.about-content-top__img {
+	flex: 1 1 516px;
+	max-width: 516px;
+	width: 100%;
+	height: auto;
+	min-width: 0;
+	object-fit: contain;
+}
+
+.about-content-bottom {
+	padding-inline: 146px;
+	display: flex;
+	justify-content: space-between;
+	gap: 0 132px;
+	@media (max-width: 1200px) {
+		padding-inline: 24px;
+		gap: 0 24px;
+	}
+	@media (max-width: 768px) {
+		flex-direction: column-reverse;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 62px 0;
+	}
+}
+
+.about-content-bottom__img {
+	position: relative;
+	margin-left: 52px;
+	bottom: 182px;
+	@media (max-width: 1280px) {
+		bottom: 96px;
+	}
+	@media (max-width: 1200px) {
+		margin-left: 0;
+		bottom: 0;
+	}
+}
+
+.about-content-bottom__content {
+	.about-content-bottom__dl {
+		display: flex;
+		gap: 83px;
+		margin-bottom: 53px;
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+		}
+	}
+	.about-content-bottom__text {
+		max-width: 516px;
+	}
+}

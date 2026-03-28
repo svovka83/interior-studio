@@ -26,13 +26,14 @@
 @use "./components/cascade-pictures.scss";
 @use "./components/burger-menu.scss";
 @use "./components/progress-bar.scss";
+@use "./components/item-dl.scss";
+@use "./components/above-footer.scss";
 
 // main
 
 @use "./pages/main/main-top.scss";
 @use "./pages/main/philosophy.scss";
 @use "./pages/main/our-projects.scss";
-@use "./pages/main/above-footer.scss";
 @use "./pages/main/main-footer.scss";
 
 // news
@@ -64,6 +65,7 @@
 
 @use "./pages/about/about-top.scss";
 @use "./pages/about/about-slider.scss";
+@use "./pages/about/about-content.scss";
 
 // for slider
 
