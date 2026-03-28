@@ -73,22 +73,15 @@
 					</div>
 				</div>
 				<div class="main-top__progress-bar">
-					<!-- make progress-bar a component ** -->
-					<div class="progress-bar">
-						<div id="progress-prev" class="progress-bar__button main-top-swiper-prev">
-							<svg class="progress-bar__icon">
-								<use xlink:href="images/icons.svg#progress-prev"></use>
-							</svg>
-							<p>0<span id="progress-num-next">1</span></p>
-						</div>
-						<div class="main-top-swiper-pagination"></div>
-						<div id="progress-next" class="progress-bar__button main-top-swiper-next">
-							<p>04</p>
-							<svg class="progress-bar__icon">
-								<use xlink:href="images/icons.svg#progress-next"></use>
-							</svg>
-						</div>
-					</div>
+					<!-- progressBar ( classProgressBar, classTriggerProgress, classButton, classPrev, classNext, classIcon ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/progress-bar.njk" import progressBar %}
+          {{ progressBar( "progress-bar_white",
+					"main-top-swiper-pagination",
+					"progress-bar__button_white",
+					"main-top-swiper-prev",
+					"main-top-swiper-next",
+					"progress-bar__icon_white" ) }}
 				</div>
 				<div class="main-top__discover">
 					<!-- discover (classDiscover) -->

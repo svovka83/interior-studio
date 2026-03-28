@@ -1,0 +1,17 @@
+{% macro progressBar( classProgressBar, classTriggerProgress, classButton, classPrev, classNext, classIcon ) %}
+  <div class="progress-bar {{classProgressBar}}">
+    <div id="progress-prev" class="progress-bar__button {{classButton}} {{classPrev}}">
+      <svg class="progress-bar__icon {{classIcon}}">
+        <use xlink:href="/images/icons.svg#progress-prev"></use>
+      </svg>
+      <p>0<span id="progress-num-next">1</span></p>
+    </div>
+    <div class="{{classTriggerProgress}}"></div>
+    <div id="progress-next" class="progress-bar__button {{classButton}} {{classNext}}">
+      <p>04</p>
+      <svg class="progress-bar__icon {{classIcon}}">
+        <use xlink:href="/images/icons.svg#progress-next"></use>
+      </svg>
+    </div>
+  </div>
+{% endmacro %}

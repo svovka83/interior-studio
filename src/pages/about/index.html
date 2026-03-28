@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About</title>
+	</head>
+	<body>
+		<!-- header ( classHeader, classLogo, classMenu, classLang, classBurgerMenu, classBurgerIcon, classButton ) -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/header.njk" import header %}
+		{{ header("header_whitefull", "logo_whitefull", "menu_whitefull", "lang_whitefull", "burger-menu_whitefull", "burger-menu__icon_whitefull",
+		"button_dark button_whitefull-border button_header-off") }}
+
+		<!-- burger-menu-screen () -->
+		<!-- prettier-ignore -->
+		{% from "./src/partials/burger-menu.njk" import burgerMenu %}
+		{{ burgerMenu() }}
+
+		<main class="about-main" id="go-to-top">
+			<!-- about-top -->
+			<section class="about-top">
+				<div class="about-top__content">
+					<div class="about-top__title">
+						<!-- title ( name, classTitle ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/title.njk" import title %}
+					{{ title( "Company Philosophy", "title_h2 title_light") }}
+					</div>
+					<div class="about-top__text">
+						<!-- text ( text, classText ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/text.njk" import text %}
+					{{ text( "The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles and architecture. ", "text_white" ) }}
+					</div>
+				</div>
+				<img
+					class="about-top__bg"
+					src="/public/images/top-backgrounds/about-top.jpg"
+					alt="about top background" />
+			</section>
+
+			<!-- about-slider-section -->
+			<section class="about-slider container-big">
+				<div class="about-slider-top">
+					<div class="about-slider-top__content">
+						<div class="about-slider-top__title">
+							<!-- title ( name, classTitle ) -->
+							<!-- prettier-ignore -->
+							{% from "src/partials/title.njk" import title %}
+							{{ title( "Company Philosophy", "title_h2 title_dark") }}
+						</div>
+						<div class="about-slider-top__text">
+							<!-- text ( text, classText ) -->
+							<!-- prettier-ignore -->
+							{% from "src/partials/text.njk" import text %}
+							{{ text( "The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles and architecture. ", "text_light" ) }}
+						</div>
+						<div class="about-slider-top__pogressbar">
+							<!-- progressBar ( classProgressBar, classTriggerProgress, classButton, classPrev, classNext, classIcon ) -->
+							<!-- prettier-ignore -->
+							{% from "src/partials/progress-bar.njk" import progressBar %}
+							{{ progressBar( "progress-bar_light-gray",
+							"about-swiper-pagination",
+							"progress-bar__button_light-gray",
+							"about-swiper-prev",
+							"about-swiper-next",
+							"progress-bar__icon_light-gray" ) }}
+						</div>
+					</div>
+					<div class="about-slider-top__slider">
+						<div class="about-swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img
+										class="about-slider-top__img"
+										src="/images/about-content/slide.jpg"
+										alt="slide 1" />
+								</div>
+								<div class="swiper-slide">
+									<img
+										class="about-slider-top__img"
+										src="/images/about-content/slide.jpg"
+										alt="slide 2" />
+								</div>
+								<div class="swiper-slide">
+									<img
+										class="about-slider-top__img"
+										src="/images/about-content/slide.jpg"
+										alt="slide 3" />
+								</div>
+								<div class="swiper-slide">
+									<img
+										class="about-slider-top__img"
+										src="/images/about-content/slide.jpg"
+										alt="slide 4" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="about-slider-bottom">
+					<!-- I will continue from this point tomorrow -->
+				</div>
+			</section>
+		</main>
+
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>

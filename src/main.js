@@ -5,9 +5,6 @@ import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 // burger-menu
 
-// const disableBodyScroll = bodyScrollLock.disableBodyScroll;
-// const enableBodyScroll = bodyScrollLock.enableBodyScroll;
-
 const burgerBtn = document.querySelectorAll(".burger-menu");
 const burgerMenu = document.querySelectorAll(".burger-menu-screen");
 
@@ -134,6 +131,41 @@ const mainImageSlider = new Swiper(".main-top__swiper-img", {
 	},
 });
 
+// about-swiper
+
+const aboutSlider = new Swiper(".about-swiper", {
+	initialSlide: 0,
+	spaceBetween: 12,
+	slidesPerView: "auto",
+	speed: 800,
+	allowTouchMove: false,
+
+	pagination: {
+		el: ".about-swiper-pagination",
+		type: "progressbar",
+	},
+
+	navigation: {
+		nextEl: ".about-swiper-next",
+		prevEl: ".about-swiper-prev",
+	},
+	// breakpoints: {
+	// 	321: {
+	// 		slidesPerView: 1.195,
+	// 	},
+	// 	378: {
+	// 		slidesPerView: 1.17,
+	// 	},
+	// 	769: {
+	// 		slidesPerView: 1.185,
+	// 	},
+	// 	1025: {
+	// 		slidesPerView: 1.175,
+	// 	},
+	// },
+});
+
+// counter buttons
 const prevBtn = document.getElementById("progress-prev");
 const nextBtn = document.getElementById("progress-next");
 const nextText = document.getElementById("progress-num-next");

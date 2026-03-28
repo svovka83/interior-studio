@@ -25,6 +25,7 @@
 @use "./components/one-news-slide.scss";
 @use "./components/cascade-pictures.scss";
 @use "./components/burger-menu.scss";
+@use "./components/progress-bar.scss";
 
 // main
 
@@ -58,6 +59,11 @@
 @use "./pages/one-project/one-project-quatation.scss";
 @use "./pages/one-project/one-project-content.scss";
 @use "./pages/one-project/one-project-footer.scss";
+
+// about
+
+@use "./pages/about/about-top.scss";
+@use "./pages/about/about-slider.scss";
 
 // for slider
 

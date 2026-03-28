@@ -1,0 +1,52 @@
+.progress-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&_white {
+		width: 276px;
+		@media (max-width: 1024px) {
+			width: 238px;
+		}
+		@media (max-width: 377px) {
+			width: 177px;
+		}
+	}
+	&_light-gray {
+		width: 317px;
+		@media (max-width: 1024px) {
+			width: 365px;
+		}
+		@media (max-width: 420px) {
+			width: 317px;
+		}
+	}
+
+	.progress-bar__button {
+		display: flex;
+		align-items: center;
+		gap: 0 12px;
+		font-family: "Montserrat", sans-serif;
+		font-weight: 300;
+		font-size: 11px;
+		letter-spacing: 6%;
+		cursor: pointer;
+		&_white {
+			color: white;
+		}
+		&_light-gray {
+			color: #82828280;
+		}
+	}
+	.progress-bar__icon {
+		width: 5px;
+		height: 9px;
+		fill: transparent;
+		stroke: white;
+		&_white {
+			stroke: white;
+		}
+		&_light-gray {
+			stroke: #82828280;
+		}
+	}
+}
