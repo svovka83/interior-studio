@@ -68,6 +68,10 @@
 @use "./pages/about/about-content.scss";
 @use "./pages/about/about-footer.scss";
 
+// contact
+
+@use "./pages/contact/footer-contact.scss";
+
 // for slider
 
 @import "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css";

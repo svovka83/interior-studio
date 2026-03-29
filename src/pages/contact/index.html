@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact</title>
+	</head>
+	<body>
+		<!-- header ( classHeader, classLogo, classMenu, classLang, classBurgerMenu, classBurgerIcon, classButton ) -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/header.njk" import header %}
+		{{ header("header_transparent", "logo_transparent", "menu_transparent", "lang_transparent", "", "burger-menu__icon_transparent",
+		"button_light button_transparent-border button_header-off") }}
+
+		<!-- burger-menu-screen () -->
+		<!-- prettier-ignore -->
+		{% from "./src/partials/burger-menu.njk" import burgerMenu %}
+		{{ burgerMenu() }}
+
+		<footer class="footer-contact">
+			<!-- footer( classFooter ) -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/footer.njk" import footer %}
+      {{ footer( "footer__top_contact" ) }}
+			<!-- footerBottom( classIcon, classFooter ) -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/footer-bottom.njk" import footerBottom %}
+			{{ footerBottom( "footer-bottom__icon_primary", "footer-bottom_contact" ) }}
+
+			<picture class="footer-contact__picture">
+				<source srcset="/images/footers/main-footer_377.jpg" media="(max-width: 377px)" />
+				<source srcset="/images/footers/main-footer_768.jpg" media="(max-width: 768px)" />
+				<source srcset="/images/footers/main-footer_1024.jpg" media="(max-width: 1024px)" />
+				<img
+					class="footer-contact__bg"
+					src="/images/footers/main-footer_1440.jpg"
+					alt="footer main background" />
+			</picture>
+		</footer>
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>

@@ -1,5 +1,5 @@
-{% macro footer() %}
-	<div class="footer__top adaptive-container">
+{% macro footer( classFooter ) %}
+	<div class="footer__top adaptive-container {{classFooter}}">
 		<div class="footer__title-block">
 			<!-- title ( name, classTitle ) -->
 			<!-- prettier-ignore -->
@@ -11,55 +11,56 @@
 			</p>
 		</div>
 		<div class="footer__grid">
-					<div class="footer__addresses">
-						<!-- If I have time, I will make "footer__address-block" a component -->
-						<div class="footer__address-block">
-							<!-- title ( name, classTitle ) -->
-							<!-- prettier-ignore -->
-							{% from "src/partials/title.njk" import title %}
-							{{ title("Kyiv", "title_h4 title_light") }}
-							<div class="footer__address-text">
-								<p>(209) 555-0104</p>
-								<p>6391 Elgin St. Celina,</p>
-								<p>Delaware 10299</p>
-							</div>
-						</div>
-						<div class="footer__address-block">
-							<!-- title ( name, classTitle ) -->
-							<!-- prettier-ignore -->
-							{% from "src/partials/title.njk" import title %}
-							{{ title("Lviv", "title_h4 title_light") }}
-							<div class="footer__address-text">
-								<p>(209) 555-0104</p>
-								<p>6391 Elgin St. Celina,</p>
-								<p>Delaware 10299</p>
-							</div>
-						</div>
-						<div class="footer__address-block">
-							<!-- title ( name, classTitle ) -->
-							<!-- prettier-ignore -->
-							{% from "src/partials/title.njk" import title %}
-							{{ title("Kharkiv", "title_h4 title_light") }}
-							<div class="footer__address-text">
-								<p>(209) 555-0104</p>
-								<p>6391 Elgin St. Celina,</p>
-								<p>Delaware 10299</p>
-							</div>
-						</div>
+			<div class="footer__addresses">						
+				<div class="footer__address-block">
+					<!-- title ( name, classTitle ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/title.njk" import title %}
+					{{ title("Kyiv", "title_h4 title_light") }}
+					<div class="footer__address-text">
+						<p>(209) 555-0104</p>
+						<p>6391 Elgin St. Celina,</p>
+						<p>Delaware 10299</p>
 					</div>
-					<div class="footer__info">
-						<a class="footer__info-link" href="mailto:info@gmail.com">info@gmail.com</a>
-						<!-- fbInBe ( classFbInBe ) -->
-						<!-- prettier-ignore -->
-						{% from "src/partials/fb-in-be.njk" import fbInBe %}
-						{{ fbInBe("fb-in-be-block_light") }}
+				</div>
+
+				<div class="footer__address-block">
+					<!-- title ( name, classTitle ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/title.njk" import title %}
+					{{ title("Lviv", "title_h4 title_light") }}
+					<div class="footer__address-text">
+						<p>(209) 555-0104</p>
+						<p>6391 Elgin St. Celina,</p>
+						<p>Delaware 10299</p>
 					</div>
-					<div class="footer__button">
-						<!-- button (titleBtn, classButton) -->
-						<!-- prettier-ignore -->
-						{% from "src/partials/button.njk" import button %}
-						{{ button("Make request", "button_dark button_whitefull") }}
+				</div>
+
+				<div class="footer__address-block">
+					<!-- title ( name, classTitle ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/title.njk" import title %}
+					{{ title("Kharkiv", "title_h4 title_light") }}
+					<div class="footer__address-text">
+						<p>(209) 555-0104</p>
+						<p>6391 Elgin St. Celina,</p>
+						<p>Delaware 10299</p>
 					</div>
+				</div>
+			</div>
+			<div class="footer__info">
+				<a class="footer__info-link" href="mailto:info@gmail.com">info@gmail.com</a>
+				<!-- fbInBe ( classFbInBe ) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/fb-in-be.njk" import fbInBe %}
+				{{ fbInBe("fb-in-be-block_light") }}
+			</div>
+			<div class="footer__button">
+				<!-- button (titleBtn, classButton) -->
+				<!-- prettier-ignore -->
+				{% from "src/partials/button.njk" import button %}
+				{{ button("Make request", "button_dark button_whitefull") }}
+			</div>
 		</div>
 	</div>
 {% endmacro %}

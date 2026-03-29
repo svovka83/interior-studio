@@ -292,8 +292,10 @@
 
 		<!-- footer -->
 		<footer class="footer-main">
+			<!-- footer( classFooter ) -->
 			<!-- prettier-ignore -->
-			{% from "src/partials/footer.njk" import footer %} {{ footer() }}
+			{% from "src/partials/footer.njk" import footer %}
+			{{ footer( "" ) }}
 			<!-- footerBottom( classIcon ) -->
 			<!-- prettier-ignore -->
 			{% from "src/partials/footer-bottom.njk" import footerBottom %}
