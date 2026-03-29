@@ -88,10 +88,10 @@
 					"progress-bar__icon_white" ) }}
 				</div>
 				<div class="main-top__discover">
-					<!-- discover (classDiscover) -->
+					<!-- discover ( classDiscover, classText ) -->
 					<!-- prettier-ignore -->
 					{% from "src/partials/discover-more.njk" import discover %}
-					{{ discover("discover_light") }}
+					{{ discover("discover_light", "Discover more") }}
 				</div>
 				<div class="main-top__bottom">
 					<!-- fbInBe ( classFbInBe ) -->
@@ -305,7 +305,7 @@
 			{% from "src/partials/footer-bottom.njk" import footerBottom %}
 			{{ footerBottom( "footer-bottom__icon_primary" ) }}
 
-			<picture class="footer-news__picture">
+			<picture class="footer-main__picture">
 				<source srcset="/images/footers/main-footer_377.jpg" media="(max-width: 377px)" />
 				<source srcset="/images/footers/main-footer_768.jpg" media="(max-width: 768px)" />
 				<source srcset="/images/footers/main-footer_1024.jpg" media="(max-width: 1024px)" />

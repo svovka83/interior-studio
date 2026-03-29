@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>404</title>
+	</head>
+	<body>
+		<div id="preloader">
+			<div class="preloader">Loading...</div>
+		</div>
+
+		<!-- header ( classHeader, classLogo, classMenu, classLang, classBurgerMenu, classBurgerIcon, classButton ) -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/header.njk" import header %}
+		{{ header("header_transparent", "logo_transparent", "menu_transparent", "lang_transparent", "", "burger-menu__icon_transparent",
+		"button_light button_transparent-border button_header-off") }}
+
+		<!-- burger-menu-screen () -->
+		<!-- prettier-ignore -->
+		{% from "./src/partials/burger-menu.njk" import burgerMenu %}
+		{{ burgerMenu() }}
+
+		<footer class="footer-not-found">
+			<div class="footer-not-found__content">
+				<div class="footer-not-found__title">
+					<!-- title ( name, classTitle ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/title.njk" import title %}
+          {{ title( "Page not found", "title_h2 title_semi-light") }}
+				</div>
+				<div class="footer-not-found__text">
+					<!-- text ( text, classText ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/text.njk" import text %}
+          {{ text( "Something went wrong. Page not found", "text_white" ) }}
+				</div>
+				<a class="footer-not-found__link" href="/interior-studio/">
+					<!-- discover ( classDiscover, classText ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/discover-more.njk" import discover %}
+					{{ discover("discover_light", "go to main") }}
+				</a>
+			</div>
+
+			<!-- footerBottom( classIcon, classFooter ) -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/footer-bottom.njk" import footerBottom %}
+			{{ footerBottom( "footer-bottom__icon_primary", "footer-bottom_contact" ) }}
+
+			<picture class="footer-not-found__picture">
+				<source srcset="/images/footers/main-footer_377.jpg" media="(max-width: 377px)" />
+				<source srcset="/images/footers/main-footer_768.jpg" media="(max-width: 768px)" />
+				<source srcset="/images/footers/main-footer_1024.jpg" media="(max-width: 1024px)" />
+				<img
+					class="footer-not-found__bg"
+					src="/images/footers/main-footer_1440.jpg"
+					alt="footer main background" />
+			</picture>
+		</footer>
+
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>
