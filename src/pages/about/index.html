@@ -191,6 +191,50 @@
 			{{ aboveFooter( "above-footer_dark", "title_h1 title_light", "text_white" ) }}
 		</main>
 
+		<footer class="footer-about">
+			<section class="footer-about__inner responsive-container">
+				<div class="footer-about__title">
+					<!-- title ( name, classTitle ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/title.njk" import title %}
+					{{ title( "Do you want to work in our team?", "title_h2 title_dark") }}
+				</div>
+				<div class="footer-about__content">
+					<div class="footer-about__email">
+						<!-- title input( placeholder, classInput, type ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/input.njk" import input %}
+						{{ input( "Email", "input_gray", "email") }}
+						<svg class="footer-about__email-icon">
+							<use xlink:href="/images/icons.svg#email-arrow"></use>
+						</svg>
+					</div>
+					<div class="footer-about__info-block">
+						<div class="footer-about__text">
+							<!-- text ( text, classText ) -->
+							<!-- prettier-ignore -->
+							{% from "src/partials/text.njk" import text %}
+							{{ text( "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam.", "text_light" ) }}
+						</div>
+						<div class="footer-about__info">
+							<a class="footer-about__link" href="mailto:info@hi-light.pl">info@hi-light.pl</a>
+							<div class="footer-about__fbInBe">
+								<!-- fbInBe ( classFbInBe ) -->
+								<!-- prettier-ignore -->
+								{% from "src/partials/fb-in-be.njk" import fbInBe %}
+								{{ fbInBe("fb-in-be-block_dark") }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- footerBottom( classIcon ) -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/footer-bottom.njk" import footerBottom %}
+			{{ footerBottom( "footer-bottom__icon_secondary" ) }}
+		</footer>
+
 		<script type="module" src="/src/main.js"></script>
 	</body>
 </html>
