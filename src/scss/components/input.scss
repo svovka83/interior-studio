@@ -4,17 +4,35 @@
 	font-weight: 300;
 	font-size: 20px;
 	line-height: 171%;
-	color: white;
 	background-color: transparent;
-	opacity: 0.9;
 	padding-right: 32px;
 	padding-bottom: 4px;
 	border: none;
-	border-bottom: 1px solid #ffffff4d;
-	&::placeholder {
+	&_white {
+		border-bottom: 1px solid #ffffff4d;
 		color: white;
-		opacity: 0.7;
+		opacity: 0.9;
+		&::placeholder {
+			color: white;
+			opacity: 0.7;
+		}
 	}
+	&_gray {
+		border-bottom: 1px solid #515151;
+		color: #080808;
+		&::placeholder {
+			color: #080808;
+			opacity: 0.7;
+		}
+	}
+	&_dark {
+		border-bottom: 1px solid #d6d6d64d;
+		color: #3a3e4b;
+		&::placeholder {
+			color: #3a3e4b;
+		}
+	}
+
 	@media (max-width: 1024px) {
 		font-size: 16px;
 		padding-bottom: 6px;
