@@ -101,3 +101,11 @@ body {
 		max-width: 375px;
 	}
 }
+
+// taking off blue background
+
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px #fff inset;
+	-webkit-text-fill-color: #3a3e4b;
+	transition: background-color 9999s ease-in-out 0s;
+}

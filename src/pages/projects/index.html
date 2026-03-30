@@ -137,6 +137,18 @@
 			{{ footerBottom( "footer-bottom__icon_secondary" ) }}
 		</footer>
 
+		<!-- pop up 1 -->
+		<!-- popUp () -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/pop-up.njk" import popUp %}
+    {{ popUp() }}
+
+		<!-- pop up 2 -->
+		<!-- popUp2 () -->
+		<!-- prettier-ignore -->
+		{% from "src/partials/pop-up-2.njk" import popUp2 %}
+    {{ popUp2() }}
+
 		<script type="module" src="/src/main.js"></script>
 	</body>
 </html>
