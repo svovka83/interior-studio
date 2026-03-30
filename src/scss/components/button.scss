@@ -38,6 +38,11 @@
 			padding: 15px 37px 11px;
 		}
 	}
+	&_pop-up {
+		padding: 13px 49px;
+		background-color: #3a3e4b;
+		border: 1px solid #3a3e4b;
+	}
 	&_header-off {
 		@media (max-width: 570px) {
 			display: none;

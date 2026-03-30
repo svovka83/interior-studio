@@ -1,0 +1,10 @@
+{% macro radioBtn( text ) %}
+	<label class="radio-button">
+		<input type="radio" name="area" value="{{text}}" />
+		<p class="radio-button__text">{{text}}</p>
+    <div class="radio-button__custom">
+      <span class="radio-button__custom-inner"></span>
+    </div>
+		<div class="radio-buttons__line"></div>
+	</label>
+{% endmacro %}

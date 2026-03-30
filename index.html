@@ -323,7 +323,7 @@
 						{{ title( "Calculate the cost of work", "title_h3 title_pop-up") }}
 					</div>
 					<form class="pop-up__form" action="#!">
-						<!-- title input( placeholder, classInput, type ) -->
+						<!-- input( placeholder, classInput, type ) -->
 						<!-- prettier-ignore -->
 						{% from "src/partials/input.njk" import input %}
 						{{ input( "Name", "input_dark", "text") }}
@@ -331,20 +331,60 @@
 						{{ input( "Phone", "input_dark", "tel") }}
 						{{ input( "Your city", "input_dark", "text") }}
 						{{ input( "Email", "input_dark", "email") }}
-						{{ input( "Property type", "input_dark", "text") }}
+						<!-- popupDropdown() -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/popup-dropdown.njk" import popupDropdown %}
+						{{ popupDropdown() }}
+						<!-- input( placeholder, classInput, type ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/input.njk" import input %}
 						{{ input( "Your comment", "input_dark", "text") }}
 					</form>
 				</div>
 				<div class="pop-up__bottom">
-					67890
-					<div class="pop-up__bottom-title"></div>
-					<div class="pop-up__radio-buttons"></div>
-					<div class="pop-up__attach-button-block">
-						<div class="pop-up__attach"></div>
-						<div class="pop-up__button"></div>
+					<h4 class="pop-up__radio-title">Area (m2)</h4>
+					<div class="pop-up__radio-buttons">
+						<!-- radioBtn ( text ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/radio-button.njk" import radioBtn %}
+						{{ radioBtn( "to 50" ) }}
+						{{ radioBtn( "50-150" ) }}
+						{{ radioBtn( "150-250" ) }}
+						{{ radioBtn( "250-400" ) }}
+						{{ radioBtn( "400-600" ) }}
+						{{ radioBtn( "600-800" ) }}
+						{{ radioBtn( "800-1000" ) }}
+						{{ radioBtn( "1000+" ) }}
 					</div>
-					<div class="pop-up__text"></div>
+					<div class="pop-up__attach-button-block">
+						<input type="file" id="popup-attach" />
+						<label class="pop-up__attach" for="popup-attach">
+							<img class="pop-up__attach-img" src="/images/pop-up/attach-icon.png" alt="attach" />
+							<div class="pop-up__attach-content">
+								<p class="pop-up__attach-title">Attach your file</p>
+								<p class="pop-up__attach-text">File size not more than 10 MB</p>
+							</div>
+						</label>
+						<div class="pop-up__button">
+							<!-- button (titleBtn, classButton) -->
+							<!-- prettier-ignore -->
+							{% from "src/partials/button.njk" import button %}
+							{{ button("Send request", "button_light button_pop-up" ) }}
+						</div>
+					</div>
+					<div class="pop-up__text">
+						<!-- text ( text, classText ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/text.njk" import text %}
+						{{ text( "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Making it look like readable English.", "text_gray" ) }}
+					</div>
 				</div>
+
+				<button class="pop-up__close">
+					<svg class="pop-up__close-icon">
+						<use xlink:href="/images/icons.svg#close-icon"></use>
+					</svg>
+				</button>
 			</div>
 		</section>
 
