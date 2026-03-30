@@ -1,14 +1,14 @@
 .input {
 	width: 100%;
 	font-family: "Montserrat", sans-serif;
-	font-weight: 300;
-	font-size: 20px;
-	line-height: 171%;
 	background-color: transparent;
 	padding-right: 32px;
-	padding-bottom: 4px;
 	border: none;
 	&_white {
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 171%;
+		padding-bottom: 4px;
 		border-bottom: 1px solid #ffffff4d;
 		color: white;
 		opacity: 0.9;
@@ -16,25 +16,37 @@
 			color: white;
 			opacity: 0.7;
 		}
+		@media (max-width: 1024px) {
+			font-size: 16px;
+			padding-bottom: 6px;
+		}
 	}
 	&_gray {
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 171%;
+		padding-bottom: 4px;
 		border-bottom: 1px solid #515151;
 		color: #080808;
 		&::placeholder {
 			color: #080808;
 			opacity: 0.7;
 		}
+		@media (max-width: 1024px) {
+			font-size: 16px;
+			padding-bottom: 6px;
+		}
 	}
 	&_dark {
+		font-weight: 600;
+		font-size: 11px;
+		line-height: 100%;
+		padding-bottom: 8px;
 		border-bottom: 1px solid #d6d6d64d;
 		color: #3a3e4b;
+		letter-spacing: 6%;
 		&::placeholder {
 			color: #3a3e4b;
 		}
-	}
-
-	@media (max-width: 1024px) {
-		font-size: 16px;
-		padding-bottom: 6px;
 	}
 }

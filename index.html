@@ -313,6 +313,41 @@
 			</picture>
 		</footer>
 
+		<section class="pop-up">
+			<div class="pop-up__inner">
+				<div class="pop-up__top">
+					<div class="pop-up__top-title">
+						<!-- title ( name, classTitle ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/title.njk" import title %}
+						{{ title( "Calculate the cost of work", "title_h3 title_pop-up") }}
+					</div>
+					<form class="pop-up__form" action="#!">
+						<!-- title input( placeholder, classInput, type ) -->
+						<!-- prettier-ignore -->
+						{% from "src/partials/input.njk" import input %}
+						{{ input( "Name", "input_dark", "text") }}
+						{{ input( "Last name", "input_dark", "text") }}
+						{{ input( "Phone", "input_dark", "tel") }}
+						{{ input( "Your city", "input_dark", "text") }}
+						{{ input( "Email", "input_dark", "email") }}
+						{{ input( "Property type", "input_dark", "text") }}
+						{{ input( "Your comment", "input_dark", "text") }}
+					</form>
+				</div>
+				<div class="pop-up__bottom">
+					67890
+					<div class="pop-up__bottom-title"></div>
+					<div class="pop-up__radio-buttons"></div>
+					<div class="pop-up__attach-button-block">
+						<div class="pop-up__attach"></div>
+						<div class="pop-up__button"></div>
+					</div>
+					<div class="pop-up__text"></div>
+				</div>
+			</div>
+		</section>
+
 		<script type="module" src="/src/main.js"></script>
 	</body>
 </html>

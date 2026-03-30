@@ -16,7 +16,7 @@ export default defineConfig({
 				oneProject: resolve(__dirname, "src/pages/one-project/index.html"),
 				about: resolve(__dirname, "src/pages/about/index.html"),
 				contact: resolve(__dirname, "src/pages/contact/index.html"),
-				notFound: resolve(__dirname, "src/pages/not-found/index.html"),
+				notFound: resolve(__dirname, "404.html"),
 			},
 		},
 	},

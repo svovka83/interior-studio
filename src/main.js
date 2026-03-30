@@ -3,8 +3,6 @@ import "./scss/styles.scss";
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
-// page not found
-
 // preloader
 
 window.addEventListener("load", () => {
