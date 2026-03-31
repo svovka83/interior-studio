@@ -1,5 +1,3 @@
-// burger-menu
-
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 export function initBurgerMenu() {

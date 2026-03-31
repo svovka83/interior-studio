@@ -5,7 +5,7 @@ export function oneNewsSlider() {
 
 	if (!slider) return;
 
-	new Swiper(".one-news-swiper", {
+	new Swiper(slider, {
 		slidesPerView: "auto",
 		speed: 700,
 		breakpoints: {

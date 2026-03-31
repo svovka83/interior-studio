@@ -1,7 +1,5 @@
 import "./scss/styles.scss";
 
-import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
-
 // utils
 import { initBurgerMenu } from "./js/utils/burger-menu.js";
 import { initPopupForm } from "./js/utils/popup-form.js";
@@ -11,6 +9,9 @@ import { dropdownObserver } from "./js/utils/dropdown-observer.js";
 
 // sliders
 import { oneNewsSlider } from "./js/sliders/one-news.js";
+import { mainSlider } from "./js/sliders/main.js";
+import { aboutSlider } from "./js/sliders/about.js";
+import { counterButtons } from "./js/sliders/counter-buttons.js";
 
 // preloader
 
@@ -25,6 +26,7 @@ window.addEventListener("load", () => {
 		loader.remove();
 	}, 2800);
 });
+
 // utils
 initBurgerMenu();
 initPopupForm();
@@ -34,103 +36,6 @@ dropdownObserver();
 
 // sliders
 oneNewsSlider();
-
-// main-swiper
-
-const mainTextSlider = new Swiper(".main-top__swiper-text", {
-	slidesPerView: 1,
-	speed: 1200,
-	effect: "fade",
-	fadeEffect: {
-		crossFade: true,
-	},
-	allowTouchMove: false,
-});
-
-const mainImageSlider = new Swiper(".main-top__swiper-img", {
-	initialSlide: 0,
-	speed: 800,
-	allowTouchMove: false,
-
-	thumbs: {
-		swiper: mainTextSlider,
-	},
-
-	pagination: {
-		el: ".main-top-swiper-pagination",
-		type: "progressbar",
-	},
-
-	navigation: {
-		nextEl: ".main-top-swiper-next",
-		prevEl: ".main-top-swiper-prev",
-	},
-	breakpoints: {
-		321: {
-			slidesPerView: 1.195,
-		},
-		378: {
-			slidesPerView: 1.17,
-		},
-		769: {
-			slidesPerView: 1.185,
-		},
-		1025: {
-			slidesPerView: 1.175,
-		},
-	},
-});
-
-// about-swiper
-
-const aboutSlider = new Swiper(".about-swiper", {
-	initialSlide: 0,
-	spaceBetween: 12,
-	slidesPerView: "auto",
-	speed: 800,
-	allowTouchMove: false,
-
-	pagination: {
-		el: ".about-swiper-pagination",
-		type: "progressbar",
-	},
-
-	navigation: {
-		nextEl: ".about-swiper-next",
-		prevEl: ".about-swiper-prev",
-	},
-	// breakpoints: {
-	// 	321: {
-	// 		slidesPerView: 1.195,
-	// 	},
-	// 	378: {
-	// 		slidesPerView: 1.17,
-	// 	},
-	// 	769: {
-	// 		slidesPerView: 1.185,
-	// 	},
-	// 	1025: {
-	// 		slidesPerView: 1.175,
-	// 	},
-	// },
-});
-
-// counter buttons
-const prevBtn = document.getElementById("progress-prev");
-const nextBtn = document.getElementById("progress-next");
-const nextText = document.getElementById("progress-num-next");
-let counterProgress = 1;
-
-// interrupts running code
-prevBtn.addEventListener("click", () => {
-	if (counterProgress > 1) {
-		counterProgress--;
-		nextText.innerHTML = `${counterProgress}`;
-	}
-});
-nextBtn.addEventListener("click", () => {
-	if (counterProgress < 4) {
-		counterProgress++;
-		nextText.innerHTML = `${counterProgress}`;
-	}
-});
+mainSlider();
+aboutSlider();
+counterButtons();
