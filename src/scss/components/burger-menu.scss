@@ -2,26 +2,34 @@
 	position: fixed;
 	inset: 0;
 	width: 100vw;
+	height: 100vh;
+	overflow-y: auto;
 	background-color: #080808;
+	display: flex;
+	justify-content: center;
 	left: -200vw;
 	z-index: 500;
 	transition: left 0.5s linear;
+	@media (max-width: 570px) {
+		padding-top: 152px;
+		padding-bottom: 152px;
+	}
 	.burger-menu-screen__list {
-		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		gap: 41px 0;
-		padding-left: 211px;
+		padding-right: 451px;
 		margin-top: -6px;
 		@media (max-width: 768px) {
-			padding-left: 188px;
+			padding-right: 241px;
 			margin-top: 9px;
 		}
 		@media (max-width: 570px) {
-			padding-left: 0;
+			height: 362px;
+			padding-right: 0;
 			margin-top: 0;
-			align-items: center;
+			text-align: center;
 			gap: 34px 0;
 		}
 		.burger-menu-screen__link {
@@ -46,5 +54,23 @@
 	}
 	&_active {
 		left: 0;
+	}
+}
+
+// from burger-menu-bottom
+
+.main-top__bottom.burger-menu-bottom {
+	bottom: 0;
+	padding-top: 40px;
+	padding-bottom: 24px;
+	background-color: #080808;
+	width: 90vw;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	transition: opacity 0.4s ease-in-out 0.5s, visibility 0.4s ease-in-out 0.5s;
+	&_active {
+		opacity: 1;
+		visibility: visible;
 	}
 }

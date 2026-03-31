@@ -16,10 +16,12 @@
 		{{ header("header_whitefull", "logo_whitefull", "menu_whitefull", "lang_whitefull", "burger-menu_whitefull", "burger-menu__icon_whitefull",
 		"button_dark button_whitefull-border button_header-off") }}
 
-		<!-- burger-menu-screen () -->
+		<!-- burgerMenu (), burger-menu-bottom () -->
 		<!-- prettier-ignore -->
 		{% from "./src/partials/burger-menu.njk" import burgerMenu %}
 		{{ burgerMenu() }}
+		{% from "./src/partials/burger-menu-bottom.njk" import burgerBottom %}
+		{{ burgerBottom() }}
 
 		<!-- projects top -->
 		<section class="projects-top responsive-container" id="go-to-top">

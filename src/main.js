@@ -21,6 +21,7 @@ window.addEventListener("load", () => {
 
 const burgerBtn = document.querySelectorAll(".burger-menu");
 const burgerMenu = document.querySelectorAll(".burger-menu-screen");
+const burgerBottom = document.querySelectorAll(".main-top__bottom.burger-menu-bottom");
 
 burgerBtn.forEach((btn) => {
 	btn.addEventListener("click", () => {
@@ -29,8 +30,17 @@ burgerBtn.forEach((btn) => {
 				menu.classList.add("burger-menu-screen_active");
 				disableBodyScroll(document.body);
 			} else {
-				menu.classList.remove("burger-menu-screen_active");
-				enableBodyScroll(document.body);
+				setTimeout(() => {
+					menu.classList.remove("burger-menu-screen_active");
+					enableBodyScroll(document.body);
+				}, 950);
+			}
+		});
+		burgerBottom.forEach((bottom) => {
+			if (!bottom.classList.contains("burger-menu-bottom_active")) {
+				bottom.classList.add("burger-menu-bottom_active");
+			} else {
+				bottom.classList.remove("burger-menu-bottom_active");
 			}
 		});
 	});

@@ -16,10 +16,12 @@
 		{{ header("header_transparent", "logo_transparent", "menu_transparent", "lang_transparent", "", "burger-menu__icon_transparent",
 		"button_light button_transparent-border button_header-off") }}
 
-		<!-- burger-menu-screen () -->
+		<!-- burgerMenu (), burger-menu-bottom () -->
 		<!-- prettier-ignore -->
 		{% from "./src/partials/burger-menu.njk" import burgerMenu %}
 		{{ burgerMenu() }}
+		{% from "./src/partials/burger-menu-bottom.njk" import burgerBottom %}
+		{{ burgerBottom() }}
 
 		<footer class="footer-contact">
 			<!-- footer( classFooter ) -->
