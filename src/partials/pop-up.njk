@@ -30,17 +30,17 @@
       <div class="pop-up__bottom">
         <h4 class="pop-up__radio-title">Area (m2)</h4>
         <div class="pop-up__radio-buttons">
-          <!-- radioBtn ( text ) -->
+          <!-- radioBtn ( text, isChecked ) -->
           <!-- prettier-ignore -->
           {% from "src/partials/radio-button.njk" import radioBtn %}
-          {{ radioBtn( "to 50" ) }}
-          {{ radioBtn( "50-150" ) }}
-          {{ radioBtn( "150-250" ) }}
-          {{ radioBtn( "250-400" ) }}
-          {{ radioBtn( "400-600" ) }}
-          {{ radioBtn( "600-800" ) }}
-          {{ radioBtn( "800-1000" ) }}
-          {{ radioBtn( "1000+" ) }}
+          {{ radioBtn( "to 50", "" ) }}
+          {{ radioBtn( "50-150", "checked" ) }}
+          {{ radioBtn( "150-250", "" ) }}
+          {{ radioBtn( "250-400", "" ) }}
+          {{ radioBtn( "400-600", "" ) }}
+          {{ radioBtn( "600-800", "" ) }}
+          {{ radioBtn( "800-1000", "" ) }}
+          {{ radioBtn( "1000+", "" ) }}
         </div>
         <div class="pop-up__attach-button-block">
           <input type="file" id="popup-attach" />

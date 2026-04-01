@@ -1,6 +1,6 @@
-{% macro radioBtn( text ) %}
+{% macro radioBtn( text, isChecked ) %}
 	<label class="radio-button">
-		<input type="radio" name="area" value="{{text}}" />
+		<input type="radio" name="area" value="{{text}}" {{isChecked}} />
 		<p class="radio-button__text">{{text}}</p>
     <div class="radio-button__custom">
       <span class="radio-button__custom-inner"></span>
