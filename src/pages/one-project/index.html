@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>One project</title>
 		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs"></script>
-		<script type="module" crossorigin src="/interior-studio/assets/main-Bi1nVcM0.js"></script>
+		<script type="module" crossorigin src="/interior-studio/assets/main-BJzPdOjO.js"></script>
 		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs"></script>
-		<link rel="stylesheet" crossorigin href="/interior-studio/assets/main-DA-Rt4zq.css">
+		<link rel="stylesheet" crossorigin href="/interior-studio/assets/main-DMoHi1dX.css">
 	</head>
 	<body>
 		<div id="preloader">
@@ -43,10 +43,12 @@
 		</ul>
 
 		<div class="burger-menu ">
-			<svg class="burger-menu__icon burger-menu__icon_transparent">
+			<svg class="burger-menu__icon burger-menu__icon-open burger-menu__icon_transparent">
 				<use xlink:href="/interior-studio/images/icons.svg#burger-menu-icon"></use>
 			</svg>
-
+			<svg class="burger-menu__icon burger-menu__icon-close burger-menu__icon_transparent">
+				<use xlink:href="/interior-studio/images/icons.svg#close-icon"></use>
+    	</svg>
 			<span class="burger-menu__text">Menu</span>
 		</div>
 
@@ -450,12 +452,12 @@
       <div class="pop-up__bottom">
         <h4 class="pop-up__radio-title">Area (m2)</h4>
         <div class="pop-up__radio-buttons">
-          <!-- radioBtn ( text ) -->
+          <!-- radioBtn ( text, isChecked ) -->
           <!-- prettier-ignore -->
           
           
 	<label class="radio-button">
-		<input type="radio" name="area" value="to 50" />
+		<input type="radio" name="area" value="to 50"  />
 		<p class="radio-button__text">to 50</p>
     <div class="radio-button__custom">
       <span class="radio-button__custom-inner"></span>
@@ -465,7 +467,7 @@
 
           
 	<label class="radio-button">
-		<input type="radio" name="area" value="50-150" />
+		<input type="radio" name="area" value="50-150" checked />
 		<p class="radio-button__text">50-150</p>
     <div class="radio-button__custom">
       <span class="radio-button__custom-inner"></span>
@@ -475,7 +477,7 @@
 
           
 	<label class="radio-button">
-		<input type="radio" name="area" value="150-250" />
+		<input type="radio" name="area" value="150-250"  />
 		<p class="radio-button__text">150-250</p>
     <div class="radio-button__custom">
       <span class="radio-button__custom-inner"></span>
@@ -485,7 +487,7 @@
 
           
 	<label class="radio-button">
-		<input type="radio" name="area" value="250-400" />
+		<input type="radio" name="area" value="250-400"  />
 		<p class="radio-button__text">250-400</p>
     <div class="radio-button__custom">
       <span class="radio-button__custom-inner"></span>
@@ -495,7 +497,7 @@
 
           
 	<label class="radio-button">
-		<input type="radio" name="area" value="400-600" />
+		<input type="radio" name="area" value="400-600"  />
 		<p class="radio-button__text">400-600</p>
     <div class="radio-button__custom">
       <span class="radio-button__custom-inner"></span>
@@ -505,7 +507,7 @@
 
           
 	<label class="radio-button">
-		<input type="radio" name="area" value="600-800" />
+		<input type="radio" name="area" value="600-800"  />
 		<p class="radio-button__text">600-800</p>
     <div class="radio-button__custom">
       <span class="radio-button__custom-inner"></span>
@@ -515,7 +517,7 @@
 
           
 	<label class="radio-button">
-		<input type="radio" name="area" value="800-1000" />
+		<input type="radio" name="area" value="800-1000"  />
 		<p class="radio-button__text">800-1000</p>
     <div class="radio-button__custom">
       <span class="radio-button__custom-inner"></span>
@@ -525,7 +527,7 @@
 
           
 	<label class="radio-button">
-		<input type="radio" name="area" value="1000+" />
+		<input type="radio" name="area" value="1000+"  />
 		<p class="radio-button__text">1000+</p>
     <div class="radio-button__custom">
       <span class="radio-button__custom-inner"></span>
