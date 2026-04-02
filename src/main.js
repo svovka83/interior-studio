@@ -1,5 +1,3 @@
-import "./scss/styles.scss";
-
 // utils
 import { initBurgerMenu } from "./js/utils/burger-menu.js";
 import { initPopupForm } from "./js/utils/popup-form.js";
