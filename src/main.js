@@ -1,3 +1,6 @@
+// services
+import { preloader } from "./js/services/preloader.js";
+
 // utils
 import { initBurgerMenu } from "./js/utils/burger-menu.js";
 import { initPopupForm } from "./js/utils/popup-form.js";
@@ -11,19 +14,8 @@ import { mainSlider } from "./js/sliders/main.js";
 import { aboutSlider } from "./js/sliders/about.js";
 import { counterButtons } from "./js/sliders/counter-buttons.js";
 
-// preloader
-
-window.addEventListener("load", () => {
-	const loader = document.getElementById("preloader");
-	setTimeout(() => {
-		loader.style.opacity = "0";
-		loader.style.transition = "opacity 1s";
-	}, 1500);
-
-	setTimeout(() => {
-		loader.remove();
-	}, 2800);
-});
+// services
+preloader();
 
 // utils
 initBurgerMenu();
