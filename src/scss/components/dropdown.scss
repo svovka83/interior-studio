@@ -73,8 +73,6 @@
 	flex-direction: column;
 	gap: 8px;
 	position: absolute;
-	bottom: unset;
-	top: 110%;
 	right: 0;
 	z-index: 1010;
 	background-color: #ffffff80;
@@ -84,8 +82,10 @@
 	background-color: #bdbdbd;
 	box-shadow: 0 0 0 #ffffff3b, 0 1px 1px 0 #00000033;
 	&_show-above {
-		top: unset;
 		bottom: 120%;
+	}
+	&_show-down {
+		top: 110%;
 	}
 	&_dark {
 		width: 128px;

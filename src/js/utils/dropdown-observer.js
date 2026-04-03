@@ -21,20 +21,5 @@ export function dropdownObserver() {
 				chevron.classList.remove("select__chevron_open");
 			});
 		});
-
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (!entry.isIntersecting) {
-						entry.target.classList.toggle("select__dropdown_show-above");
-					}
-				});
-			},
-			{
-				threshold: 1,
-			}
-		);
-
-		observer.observe(dropdown);
 	});
 }
