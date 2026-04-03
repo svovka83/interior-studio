@@ -1,31 +1,41 @@
-{% macro popUp() %}
+d{% macro popUp() %}
   <section class="pop-up">
-    <div class="pop-up__inner">
+    <form class="pop-up__form" action="#!" id="form">
       <div class="pop-up__top">
+
         <div class="pop-up__top-title">
           <!-- title ( name, classTitle ) -->
           <!-- prettier-ignore -->
           {% from "src/partials/title.njk" import title %}
           {{ title( "Calculate the cost of work", "title_h3 title_pop-up") }}
         </div>
-        <form class="pop-up__form" action="#!">
-          <!-- input( placeholder, classInput, type ) -->
+
+        <div class="pop-up__top-form">
+
+          <!-- input(placeholder, classInput, type, inputId) -->
           <!-- prettier-ignore -->
           {% from "src/partials/input.njk" import input %}
-          {{ input( "Name", "input_dark", "text") }}
-          {{ input( "Last name", "input_dark", "text") }}
-          {{ input( "Phone", "input_dark", "tel") }}
-          {{ input( "Your city", "input_dark", "text") }}
-          {{ input( "Email", "input_dark", "email") }}
+          {{ input( "Name", "input_dark", "text", "firstName" ) }}
+
+          {{ input( "Last name", "input_dark", "text", "lastName" ) }}
+
+          {{ input( "Phone", "input_dark", "tel", "" ) }}
+
+          {{ input( "Your city", "input_dark", "text", "city" ) }}
+
+          {{ input( "Email", "input_dark", "text", "email" ) }}
+
           <!-- popupDropdown() -->
           <!-- prettier-ignore -->
           {% from "src/partials/popup-dropdown.njk" import popupDropdown %}
           {{ popupDropdown() }}
-          <!-- input( placeholder, classInput, type ) -->
+
+          <!-- input( placeholder, classInput, type, inputId ) -->
           <!-- prettier-ignore -->
           {% from "src/partials/input.njk" import input %}
-          {{ input( "Your comment", "input_dark", "text") }}
-        </form>
+          {{ input( "Your comment", "input_dark", "text", "comment" ) }}
+
+        </div>
       </div>
       <div class="pop-up__bottom">
         <h4 class="pop-up__radio-title">Area (m2)</h4>
@@ -51,12 +61,14 @@
               <p class="pop-up__attach-text">File size not more than 10 MB</p>
             </div>
           </label>
+
           <div class="pop-up__button">
             <!-- button (titleBtn, classButton) -->
             <!-- prettier-ignore -->
             {% from "src/partials/button.njk" import button %}
             {{ button("Send request", "button_light button_pop-up" ) }}
           </div>
+
         </div>
         <div class="pop-up__text">
           <!-- text ( text, classText ) -->
@@ -71,6 +83,6 @@
           <use xlink:href="/images/icons.svg#close-icon"></use>
         </svg>
       </button>
-    </div>
+    </form>
   </section>
 {% endmacro %}

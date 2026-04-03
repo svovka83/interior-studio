@@ -17,6 +17,7 @@
 		"vite-plugin-nunjucks": "^0.2.0"
 	},
 	"dependencies": {
-		"body-scroll-lock": "^3.0.0"
+		"body-scroll-lock": "^3.0.0",
+		"validator": "^13.15.35"
 	}
 }

@@ -25,7 +25,7 @@
 	}
 }
 
-.pop-up__inner {
+.pop-up__form {
 	flex-grow: 1;
 	max-width: 1046px;
 	height: 803px;
@@ -71,7 +71,7 @@
 		text-align: center;
 		margin-bottom: 31px;
 	}
-	.pop-up__form {
+	.pop-up__top-form {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 38px 37px;

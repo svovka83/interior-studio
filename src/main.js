@@ -1,5 +1,6 @@
 // services
 import { preloader } from "./js/services/preloader.js";
+import { formValidation } from "./js/services/form-validation.js";
 
 // utils
 import { initBurgerMenu } from "./js/utils/burger-menu.js";
@@ -16,6 +17,7 @@ import { counterButtons } from "./js/sliders/counter-buttons.js";
 
 // services
 preloader();
+formValidation();
 
 // utils
 initBurgerMenu();
