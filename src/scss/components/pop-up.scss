@@ -75,13 +75,13 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 38px 37px;
-		input:last-of-type {
+		div:last-of-type {
 			grid-column: 1 / 3;
 		}
 		@media (max-width: 800px) {
 			grid-template-columns: 1fr;
 			gap: 40px 0;
-			input:last-of-type {
+			div:last-of-type {
 				grid-column: 1 / 2;
 			}
 		}

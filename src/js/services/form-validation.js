@@ -1,16 +1,26 @@
 import { isEmpty, isEmail, isLength, isAlpha } from "validator";
 
+export let isFormValid = false;
+
 export function formValidation() {
 	const form = document.getElementById("form");
 	const firstNameInput = document.getElementById("firstName");
 	const lastNameInput = document.getElementById("lastName");
 	const cityInput = document.getElementById("city");
 	const emailInput = document.getElementById("email");
-
-	const isFormValid = false;
+	const commentInput = document.getElementById("comment");
 
 	form.addEventListener("submit", (event) => {
 		event.preventDefault();
+
+		if (isFormValid) {
+			firstNameInput.value = "";
+			lastNameInput.value = "";
+			cityInput.value = "";
+			emailInput.value = "";
+			commentInput.value = "";
+			isFormValid = false;
+		}
 
 		validateImputs();
 	});
@@ -76,6 +86,21 @@ export function formValidation() {
 			displayError(emailInput, "Email is NOT valid.");
 		} else {
 			setSuccess(emailInput, "Email is valid.");
+		}
+
+		if (
+			isEmptyFirstName &&
+			isLengthFirstName &&
+			isAlphaFirstName &&
+			isEmptyLastName &&
+			isLengthLastName &&
+			isAlphaLastName &&
+			isEnteredCity &&
+			isLengthEnteredCity &&
+			isAlphaCity &&
+			isValidEmail
+		) {
+			isFormValid = true;
 		}
 	};
 
