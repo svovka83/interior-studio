@@ -1,4 +1,6 @@
 import { isEmpty, isEmail, isLength, isAlpha } from "validator";
+import { isValidPhoneNumber } from "libphonenumber-js";
+import IMask from "imask";
 
 export let isFormValid = false;
 
@@ -9,6 +11,11 @@ export function formValidation() {
 	const cityInput = document.getElementById("city");
 	const emailInput = document.getElementById("email");
 	const commentInput = document.getElementById("comment");
+	const phoneInput = document.getElementById("phone");
+
+	IMask(phoneInput, {
+		mask: "+000 00 000 00 00",
+	});
 
 	form.addEventListener("submit", (event) => {
 		event.preventDefault();
@@ -16,6 +23,7 @@ export function formValidation() {
 		if (isFormValid) {
 			firstNameInput.value = "";
 			lastNameInput.value = "";
+			phoneInput.value = "";
 			cityInput.value = "";
 			emailInput.value = "";
 			commentInput.value = "";
@@ -42,6 +50,8 @@ export function formValidation() {
 		const isAlphaCity = isAlpha(trimmedCity);
 
 		const isValidEmail = isEmail(emailInput.value);
+
+		const isValidPhone = isValidPhoneNumber(phoneInput.value);
 
 		switch (true) {
 			case !isEmptyFirstName:
@@ -87,6 +97,11 @@ export function formValidation() {
 		} else {
 			setSuccess(emailInput, "Email is valid.");
 		}
+		if (!isValidPhone) {
+			displayError(phoneInput, "Phone number is NOT valid.");
+		} else {
+			setSuccess(phoneInput, "Phone number is valid.");
+		}
 
 		if (
 			isEmptyFirstName &&
@@ -98,7 +113,8 @@ export function formValidation() {
 			isEnteredCity &&
 			isLengthEnteredCity &&
 			isAlphaCity &&
-			isValidEmail
+			isValidEmail &&
+			isValidPhone
 		) {
 			isFormValid = true;
 		}
