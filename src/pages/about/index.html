@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>About</title>
 		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs"></script>
-		<script type="module" crossorigin src="/interior-studio/assets/main-BBlHdx4C.js"></script>
+		<script type="module" crossorigin src="/interior-studio/assets/main-C3V8DFzx.js"></script>
 		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs"></script>
-		<link rel="stylesheet" crossorigin href="/interior-studio/assets/styles-ht9J7BtC.css">
+		<link rel="stylesheet" crossorigin href="/interior-studio/assets/styles-CTj9TuUO.css">
 	</head>
 	<body>
 		<div id="preloader" class="preloader">
@@ -455,7 +455,10 @@
 						<!-- prettier-ignore -->
 						
 						
-  <input class="input input_gray" type="email" placeholder="Email" />
+  <div class="input-block">
+    <input id="" class="input input_gray" type="email" placeholder="Email" />
+    <p class="validation"></p>
+  </div>
 
 						<svg class="footer-about__email-icon">
 							<use xlink:href="/interior-studio/images/icons.svg#email-arrow"></use>
@@ -513,8 +516,9 @@
 		
     
   <section class="pop-up">
-    <div class="pop-up__inner">
+    <form class="pop-up__form" action="#!" id="form">
       <div class="pop-up__top">
+
         <div class="pop-up__top-title">
           <!-- title ( name, classTitle ) -->
           <!-- prettier-ignore -->
@@ -523,24 +527,46 @@
   <h2 class="title title_h3 title_pop-up">Calculate the cost of work</h2>
 
         </div>
-        <form class="pop-up__form" action="#!">
-          <!-- input( placeholder, classInput, type ) -->
+
+        <div class="pop-up__top-form">
+
+          <!-- input(placeholder, classInput, type, inputId) -->
           <!-- prettier-ignore -->
           
           
-  <input class="input input_dark" type="text" placeholder="Name" />
+  <div class="input-block">
+    <input id="firstName" class="input input_dark" type="text" placeholder="Name" />
+    <p class="validation"></p>
+  </div>
+
 
           
-  <input class="input input_dark" type="text" placeholder="Last name" />
+  <div class="input-block">
+    <input id="lastName" class="input input_dark" type="text" placeholder="Last name" />
+    <p class="validation"></p>
+  </div>
+
 
           
-  <input class="input input_dark" type="tel" placeholder="Phone" />
+  <div class="input-block">
+    <input id="" class="input input_dark" type="tel" placeholder="Phone" />
+    <p class="validation"></p>
+  </div>
+
 
           
-  <input class="input input_dark" type="text" placeholder="Your city" />
+  <div class="input-block">
+    <input id="city" class="input input_dark" type="text" placeholder="Your city" />
+    <p class="validation"></p>
+  </div>
+
 
           
-  <input class="input input_dark" type="email" placeholder="Email" />
+  <div class="input-block">
+    <input id="email" class="input input_dark" type="text" placeholder="Email" />
+    <p class="validation"></p>
+  </div>
+
 
           <!-- popupDropdown() -->
           <!-- prettier-ignore -->
@@ -560,13 +586,18 @@
     </div>
 	</div>
 
-          <!-- input( placeholder, classInput, type ) -->
+
+          <!-- input( placeholder, classInput, type, inputId ) -->
           <!-- prettier-ignore -->
           
           
-  <input class="input input_dark" type="text" placeholder="Your comment" />
+  <div class="input-block">
+    <input id="comment" class="input input_dark" type="text" placeholder="Your comment" />
+    <p class="validation"></p>
+  </div>
 
-        </form>
+
+        </div>
       </div>
       <div class="pop-up__bottom">
         <h4 class="pop-up__radio-title">Area (m2)</h4>
@@ -664,6 +695,7 @@
               <p class="pop-up__attach-text">File size not more than 10 MB</p>
             </div>
           </label>
+
           <div class="pop-up__button">
             <!-- button (titleBtn, classButton) -->
             <!-- prettier-ignore -->
@@ -672,6 +704,7 @@
   <button class="button button_light button_pop-up">Send request</button>
 
           </div>
+
         </div>
         <div class="pop-up__text">
           <!-- text ( text, classText ) -->
@@ -688,7 +721,7 @@
           <use xlink:href="/interior-studio/images/icons.svg#close-icon"></use>
         </svg>
       </button>
-    </div>
+    </form>
   </section>
 
 
