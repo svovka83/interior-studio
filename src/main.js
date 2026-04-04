@@ -9,6 +9,7 @@ import { initPopupConfirmation } from "./js/utils/popup-confirmation.js";
 import { popupDropdown } from "./js/utils/popup-dropdown.js";
 import { dropdownObserver } from "./js/utils/dropdown-observer.js";
 import { chooseSubmenuItem } from "./js/utils/submenu.js";
+import { chooseFile } from "./js/utils/attach.js";
 
 // sliders
 import { oneNewsSlider } from "./js/sliders/one-news.js";
@@ -27,6 +28,7 @@ initPopupConfirmation();
 popupDropdown();
 dropdownObserver();
 chooseSubmenuItem();
+chooseFile();
 
 // sliders
 oneNewsSlider();
