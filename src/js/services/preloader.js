@@ -12,8 +12,9 @@ export function preloader() {
 
 		if (loaded === images.length) {
 			setTimeout(() => {
+				loaderPercets.textContent = "light";
 				loader.style.opacity = "0";
-				loader.style.transition = "opacity 1s";
+				loader.style.transition = "opacity 1s 0.5s";
 			}, 1500);
 
 			setTimeout(() => {

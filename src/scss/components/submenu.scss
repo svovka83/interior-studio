@@ -13,7 +13,7 @@
 		padding-bottom: 2px;
 		border-bottom: 1px solid transparent;
 		cursor: pointer;
-		&:hover {
+		&_active {
 			border-bottom: 1px solid #080808;
 			.submenu__link {
 				color: #080808;

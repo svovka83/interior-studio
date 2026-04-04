@@ -32,7 +32,7 @@
 				<!-- prettier-ignore -->
 				{% from "src/partials/title.njk" import title %}
 				{{ title("Our latest news", "title_h2 title_dark") }}
-				<!-- submenu ( ( link1, linkPath1, link2, linkPath2, link3, linkPath3, link4, linkPath4 ) ) -->
+				<!-- submenu ( link1, linkPath1, link2, linkPath2, link3, linkPath3, link4, linkPath4, classSubmenu ) -->
 				<!-- prettier-ignore -->
 				{% from "src/partials/submenu.njk" import submenu %}
 				{{ submenu("All", "#!", "Blog", "#!", "News", "#!", "Advice from the designer", "#!") }}
@@ -119,7 +119,7 @@
 						{{ text( "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam.", "text_white" ) }}
 					</div>
 					<div class="footer-news__email">
-						<!-- title input( placeholder, classInput, type ) -->
+						<!-- input( placeholder, classInput, type ) -->
 						<!-- prettier-ignore -->
 						{% from "src/partials/input.njk" import input %}
 						{{ input( "Email", "input_white", "email") }}

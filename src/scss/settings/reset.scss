@@ -97,10 +97,10 @@ button {
 	vertical-align: middle;
 }
 
-// taking off blue input background - change colour to suit your needs
+// taking off blue input background - change colour to suit your needs -webkit-text-fill-color
 
 input:-webkit-autofill {
-	-webkit-box-shadow: 0 0 0 1000px #fff inset;
+	-webkit-box-shadow: 0 0 0 1000px transparent inset;
 	-webkit-text-fill-color: #3a3e4b;
 	transition: background-color 9999s ease-in-out 0s;
 }
