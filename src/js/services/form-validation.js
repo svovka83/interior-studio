@@ -2,9 +2,10 @@ import { isEmpty, isEmail, isLength, isAlpha } from "validator";
 import { isValidPhoneNumber } from "libphonenumber-js";
 import IMask from "imask";
 
-export let isFormValid = false;
-
 export function formValidation() {
+	const popup = document.querySelector(".pop-up");
+	const popup2 = document.querySelector(".pop-up-2");
+
 	const form = document.getElementById("form");
 	const firstNameInput = document.getElementById("firstName");
 	const lastNameInput = document.getElementById("lastName");
@@ -14,22 +15,11 @@ export function formValidation() {
 	const phoneInput = document.getElementById("phone");
 
 	IMask(phoneInput, {
-		mask: "+000 00 000 00 00",
+		mask: "+{38} 000 000 00 00",
 	});
 
 	form.addEventListener("submit", (event) => {
 		event.preventDefault();
-
-		if (isFormValid) {
-			firstNameInput.value = "";
-			lastNameInput.value = "";
-			phoneInput.value = "";
-			cityInput.value = "";
-			emailInput.value = "";
-			commentInput.value = "";
-			isFormValid = false;
-		}
-
 		validateImputs();
 	});
 
@@ -116,7 +106,16 @@ export function formValidation() {
 			isValidEmail &&
 			isValidPhone
 		) {
-			isFormValid = true;
+			clearErrorText(firstNameInput, "");
+			clearErrorText(lastNameInput, "");
+			clearErrorText(phoneInput, "");
+			clearErrorText(cityInput, "");
+			clearErrorText(emailInput, "");
+			clearErrorText(commentInput, "");
+
+			popup.classList.remove("pop-up_open");
+			popup2.classList.add("pop-up-2_open");
+			disableBodyScroll(document.body);
 		}
 	};
 
@@ -137,5 +136,13 @@ export function formValidation() {
 		element.classList.remove("input_error");
 		errorDisplay.classList.add("validation_success");
 		element.classList.add("input_success");
+	};
+	const clearErrorText = (element, message) => {
+		const imputControl = element.parentElement;
+		const errorDisplay = imputControl.querySelector(".validation");
+		errorDisplay.innerText = message;
+		errorDisplay.classList.remove("validation_success");
+		element.value = message;
+		element.classList.remove("input_success");
 	};
 }
