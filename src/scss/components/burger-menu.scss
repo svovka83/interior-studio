@@ -3,6 +3,8 @@
 	inset: 0;
 	width: 100vw;
 	height: 100vh;
+	padding-top: 152px;
+	padding-bottom: 152px;
 	overflow-y: auto;
 	background-color: #080808;
 	display: flex;
@@ -13,11 +15,8 @@
 	@media (min-width: 1025px) {
 		display: none;
 	}
-	@media (max-width: 570px) {
-		padding-top: 152px;
-		padding-bottom: 152px;
-	}
 	.burger-menu-screen__list {
+		height: 362px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -29,7 +28,6 @@
 			margin-top: 9px;
 		}
 		@media (max-width: 570px) {
-			height: 362px;
 			padding-right: 0;
 			margin-top: 0;
 			text-align: center;
