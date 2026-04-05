@@ -51,39 +51,26 @@
 
 		<!-- news content -->
 		<div class="news-content">
-			<div class="news-content__grid our-container">
-				<!-- versatileCard ( name, pathDesktop, pathLaptop, pathTablet, pathMobile, classCard ) -->
+			<div class="news-content__grid card-container">
+				<!-- versatileCard ( name, pathDesktop, pathMobile, classCard ) -->
 				<!-- prettier-ignore -->
 				{% from "src/partials/versatile-card.njk" import versatileCard %}
 					{{ versatileCard("5 smart tips for productive collaboration with the designer",
 					"/images/versatile-cards/versatile-1_1440.jpg",
-					"/images/versatile-cards/versatile-1_1024.jpg",
-					"/images/versatile-cards/versatile-1_768.jpg",
 					"/images/versatile-cards/versatile-1_375.jpg") }}
-				<!-- simpleCard ( name, pathDesktop, pathLaptop, pathTablet, pathMobile ) -->
+				<!-- simpleCard ( name, pathImg ) -->
 				<!-- prettier-ignore -->
 				{% from "src/partials/simple-card.njk" import simpleCard %}
 				{{ simpleCard("Non-standard plinth options",
-					"/images/simple-cards/simple-1_1440.jpg",
-					"/images/simple-cards/simple-1_1024.jpg",
-					"/images/simple-cards/simple-1_768.jpg",
-					"/images/simple-cards/simple-1_375.jpg") }}
-				<!-- simpleCard ( name, pathDesktop, pathLaptop, pathTablet, pathMobile ) -->
-				<!-- prettier-ignore -->
-				{% from "src/partials/simple-card.njk" import simpleCard %}
+					"/images/simple-cards/simple-1.jpg") }}
+
 				{{ simpleCard("Interior design, LCD Rybalsky",
-					"/images/simple-cards/simple-2_1440.jpg",
-					"/images/simple-cards/simple-2_1024.jpg",
-					"/images/simple-cards/simple-2_768.jpg",
-					"/images/simple-cards/simple-2_375.jpg") }}
-				<!-- versatileCard ( name, text, pathDesktop, pathLaptop, pathTablet, pathMobile, classCard ) -->
-				<!-- prettier-ignore -->
-				{% from "src/partials/versatile-card.njk" import versatileCard %}
+					"/images/simple-cards/simple-2.jpg") }}
+
 				{{ versatileCard("5 smart tips for productive collaboration with the designer",
 					"/images/versatile-cards/versatile-2_1440.jpg",
-					"/images/versatile-cards/versatile-2_1024.jpg",
-					"/images/versatile-cards/versatile-2_768.jpg",
-					"/images/versatile-cards/versatile-2_375.jpg", "versatile-card_reverse") }}
+					"/images/versatile-cards/versatile-2_375.jpg",
+					"versatile-card_reverse") }}
 			</div>
 			<div class="news-content__pagination">
 				<svg class="news-content__pagination-icon">

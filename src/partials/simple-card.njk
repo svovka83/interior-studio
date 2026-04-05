@@ -1,16 +1,14 @@
-{% macro simpleCard( name, pathDesktop, pathLaptop, pathTablet, pathMobile ) %}
+{% macro simpleCard( name, pathImg ) %}
 <div class="simple-card">
+
 	<div class="simple-card__title">
 		<!-- title ( name, classTitle ) -->
 		<!-- prettier-ignore -->
 		{% from "src/partials/title.njk" import title %}
 		{{ title(name, "title_simple title_light") }}
 	</div>
-	<picture class="simple-card__picture">
-		<source srcset="{{pathMobile}}" media="(max-width: 767px)" />
-		<source srcset="{{pathTablet}}" media="(max-width: 1023px)" />
-		<source srcset="{{pathLaptop}}" media="(max-width: 1439px)" />
-		<img class="simple-card__img" src="{{ pathDesktop }}" alt="simple card image" />
-	</picture>
+
+	<img class="simple-card__img" src="{{ pathImg }}" alt="simple card image" />
+
 </div>
 {% endmacro %}

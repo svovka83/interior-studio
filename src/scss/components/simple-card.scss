@@ -1,19 +1,5 @@
 .simple-card {
 	position: relative;
-	width: 652px;
-	height: 652px;
-	@media (max-width: 1439px) {
-		width: 453px;
-		height: 453px;
-	}
-	@media (max-width: 1023px) {
-		width: 333px;
-		height: 333px;
-	}
-	@media (max-width: 767px) {
-		width: 327px;
-		height: 327px;
-	}
 }
 
 .simple-card__title {
@@ -22,25 +8,23 @@
 	left: 58px;
 	bottom: 56px;
 	z-index: 10;
-	@media (max-width: 1439px) {
+	@media (max-width: 1024px) {
 		width: 188px;
 		left: 46px;
 		bottom: 45px;
 	}
-	@media (max-width: 1023px) {
+	@media (max-width: 768px) {
 		width: 158px;
 		left: 32px;
 		bottom: 32px;
 	}
-	@media (max-width: 767px) {
+	@media (max-width: 580px) {
 		left: 25px;
 		bottom: 24px;
 	}
 }
 
-.simple-card__picture {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 5;
+.simple-card__img {
+	display: block;
+	width: 100%;
 }

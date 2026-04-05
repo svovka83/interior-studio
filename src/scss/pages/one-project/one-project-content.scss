@@ -21,13 +21,13 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 8px;
-	@media (max-width: 420px) {
+	@media (max-width: 580px) {
 		grid-template-columns: 1fr;
 	}
 	& picture:first-of-type,
 	picture:last-of-type {
 		grid-column: 1 / 3;
-		@media (max-width: 420px) {
+		@media (max-width: 580px) {
 			grid-column: 1 / 2;
 		}
 	}
