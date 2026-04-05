@@ -53,6 +53,7 @@ d{% macro popUp() %}
           {{ radioBtn( "1000+", "" ) }}
         </div>
         <div class="pop-up__attach-button-block">
+
           <input type="file" id="popup-attach" />
           <label class="pop-up__attach" for="popup-attach">
             <img class="pop-up__attach-img" src="/images/pop-up/attach-icon.png" alt="attach" />
@@ -62,7 +63,7 @@ d{% macro popUp() %}
             </div>
           </label>
 
-          <div class="pop-up__button">
+          <div class="pop-up__button pop-up__button_disable">
             <!-- button (titleBtn, classButton) -->
             <!-- prettier-ignore -->
             {% from "src/partials/button.njk" import button %}

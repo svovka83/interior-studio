@@ -1,10 +1,11 @@
-import { isEmpty, isEmail, isLength, isAlpha } from "validator";
-import { isValidPhoneNumber } from "libphonenumber-js";
-import IMask from "imask";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import { isEmpty, isEmail } from "validator";
+import { isValidPhoneNumber, AsYouType } from "libphonenumber-js";
 
 export function formValidation() {
 	const popup = document.querySelector(".pop-up");
 	const popup2 = document.querySelector(".pop-up-2");
+	const submitBtn = document.querySelector(".pop-up__button");
 
 	const form = document.getElementById("form");
 	const firstNameInput = document.getElementById("firstName");
@@ -14,110 +15,100 @@ export function formValidation() {
 	const commentInput = document.getElementById("comment");
 	const phoneInput = document.getElementById("phone");
 
-	IMask(phoneInput, {
-		mask: "+{38} 000 000 00 00",
+	firstNameInput.addEventListener("input", () => {
+		const isEmptyFirstName = !isEmpty(firstNameInput.value.trim());
+
+		if (!isEmptyFirstName) {
+			displayError(firstNameInput, "Field can NOT be empty.");
+		} else {
+			setSuccess(firstNameInput, "Field is not empty.");
+		}
 	});
 
-	form.addEventListener("submit", (event) => {
-		event.preventDefault();
-		validateImputs();
+	lastNameInput.addEventListener("input", () => {
+		const isEmptyLastName = !isEmpty(lastNameInput.value.trim());
+
+		if (!isEmptyLastName) {
+			displayError(lastNameInput, "Field can NOT be empty.");
+		} else {
+			setSuccess(lastNameInput, "Field is not empty.");
+		}
 	});
 
-	const validateImputs = () => {
-		const trimmedFirstName = firstNameInput.value.trim();
-		const isEmptyFirstName = !isEmpty(trimmedFirstName);
-		const isLengthFirstName = isLength(trimmedFirstName, { min: 3, max: 15 });
-		const isAlphaFirstName = isAlpha(trimmedFirstName);
+	cityInput.addEventListener("input", () => {
+		const isEnteredCity = !isEmpty(cityInput.value.trim());
 
-		const trimmedLastName = lastNameInput.value.trim();
-		const isEmptyLastName = !isEmpty(trimmedLastName);
-		const isLengthLastName = isLength(trimmedLastName, { min: 3, max: 15 });
-		const isAlphaLastName = isAlpha(trimmedLastName);
+		if (!isEnteredCity) {
+			displayError(cityInput, "Field can NOT be empty.");
+		} else {
+			setSuccess(cityInput, "Field is not empty.");
+		}
+	});
 
-		const trimmedCity = cityInput.value.trim();
-		const isEnteredCity = !isEmpty(trimmedCity);
-		const isLengthEnteredCity = isLength(trimmedCity, { min: 3, max: 15 });
-		const isAlphaCity = isAlpha(trimmedCity);
-
+	emailInput.addEventListener("input", () => {
 		const isValidEmail = isEmail(emailInput.value);
 
-		const isValidPhone = isValidPhoneNumber(phoneInput.value);
-
-		switch (true) {
-			case !isEmptyFirstName:
-				displayError(firstNameInput, "Field can not be empty.");
-				break;
-			case !isLengthFirstName:
-				displayError(firstNameInput, "Name must have 3-15 symbols.");
-				break;
-			case !isAlphaFirstName:
-				displayError(firstNameInput, "Not any symbols and spaces.");
-				break;
-			default:
-				setSuccess(firstNameInput, "The name is valid now.");
-		}
-		switch (true) {
-			case !isEmptyLastName:
-				displayError(lastNameInput, "Field can not be empty.");
-				break;
-			case !isLengthLastName:
-				displayError(lastNameInput, "Surname must have 3-15 symbols.");
-				break;
-			case !isAlphaLastName:
-				displayError(lastNameInput, "Not any symbols and spaces.");
-				break;
-			default:
-				setSuccess(lastNameInput, "The surname is valid now.");
-		}
-		switch (true) {
-			case !isEnteredCity:
-				displayError(cityInput, "Enter you city, please.");
-				break;
-			case !isLengthEnteredCity:
-				displayError(cityInput, "City must have 3-15 symbols.");
-				break;
-			case !isAlphaCity:
-				displayError(cityInput, "Not any symbols and spaces.");
-				break;
-			default:
-				setSuccess(cityInput, "The name of the city is valid now.");
-		}
 		if (!isValidEmail) {
 			displayError(emailInput, "Email is NOT valid.");
 		} else {
 			setSuccess(emailInput, "Email is valid.");
 		}
+	});
+
+	let formatter = new AsYouType();
+
+	phoneInput.addEventListener("input", (e) => {
+		if (!phoneInput.value.startsWith("+")) {
+			phoneInput.value = "+" + phoneInput.value.replace(/\+/g, "");
+		}
+
+		const raw = e.target.value;
+
+		formatter.reset();
+		const formatted = formatter.input(raw);
+
+		e.target.value = formatted;
+
+		const isValidPhone = isValidPhoneNumber(phoneInput.value);
+
 		if (!isValidPhone) {
 			displayError(phoneInput, "Phone number is NOT valid.");
 		} else {
 			setSuccess(phoneInput, "Phone number is valid.");
 		}
+	});
 
-		if (
-			isEmptyFirstName &&
-			isLengthFirstName &&
-			isAlphaFirstName &&
-			isEmptyLastName &&
-			isLengthLastName &&
-			isAlphaLastName &&
-			isEnteredCity &&
-			isLengthEnteredCity &&
-			isAlphaCity &&
-			isValidEmail &&
-			isValidPhone
-		) {
-			clearErrorText(firstNameInput, "");
-			clearErrorText(lastNameInput, "");
-			clearErrorText(phoneInput, "");
-			clearErrorText(cityInput, "");
-			clearErrorText(emailInput, "");
-			clearErrorText(commentInput, "");
+	form.addEventListener("input", () => {
+		const isEmptyFirstName = !isEmpty(firstNameInput.value.trim());
+		const isEmptyLastName = !isEmpty(lastNameInput.value.trim());
+		const isEnteredCity = !isEmpty(cityInput.value.trim());
+		const isValidEmail = isEmail(emailInput.value);
+		const isValidPhone = isValidPhoneNumber(phoneInput.value);
 
-			popup.classList.remove("pop-up_open");
-			popup2.classList.add("pop-up-2_open");
-			disableBodyScroll(document.body);
+		console.log(isEmptyFirstName, isEmptyLastName, isEnteredCity, isValidEmail, isValidPhone);
+
+		if (isEmptyFirstName && isEmptyLastName && isEnteredCity && isValidEmail && isValidPhone) {
+			submitBtn.classList.remove("pop-up__button_disable");
+		} else {
+			submitBtn.classList.add("pop-up__button_disable");
 		}
-	};
+	});
+
+	form.addEventListener("submit", (event) => {
+		event.preventDefault();
+
+		clearErrorText(firstNameInput, "");
+		clearErrorText(lastNameInput, "");
+		clearErrorText(phoneInput, "");
+		clearErrorText(cityInput, "");
+		clearErrorText(emailInput, "");
+		clearErrorText(commentInput, "");
+
+		submitBtn.classList.add("pop-up__button_disable");
+		popup.classList.remove("pop-up_open");
+		popup2.classList.add("pop-up-2_open");
+		disableBodyScroll(document.body);
+	});
 
 	const displayError = (element, message) => {
 		const imputControl = element.parentElement;
