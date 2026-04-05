@@ -1,4 +1,4 @@
-{% macro projectCard( classCard, name, classTitle, classBottom, pathDesktop, pathLaptop, pathTablet, pathMobile ) %}
+{% macro projectCard( classCard, name, classTitle, classBottom, pathDesktop, pathTablet, pathMobile ) %}
 <div class="project-card {{classCard}}">
 	<div class="project-card__location-block">
 		<span>Lodz</span>
@@ -6,24 +6,26 @@
 		<span>80 sq.m</span>
 	</div>
 	<div class="project-card__title-block {{classBottom}}">
-		<a href="/interior-studio/src/pages/one-project/">
+
+		<div class="project-card__title">
 			<!-- title ( name, classTitle ) -->
 			<!-- prettier-ignore -->
 			{% from "src/partials/title.njk" import title %}
 			{{ title(name, classTitle) }}
-		</a>
+		</div>
 
-		<!-- discover ( classDiscover, classText ) -->
-		<!-- prettier-ignore -->
-		{% from "src/partials/discover-more.njk" import discover %}
-		{{ discover("discover_light", "Discover more") }}
+		<a href="/interior-studio/src/pages/one-project/">
+			<!-- discover ( classDiscover, classText ) -->
+			<!-- prettier-ignore -->
+			{% from "src/partials/discover-more.njk" import discover %}
+			{{ discover("discover_light", "Discover more") }}	
+		</a>
 		
 	</div>
 	
 	<picture class="project-card__picture">
-		<source srcset="{{pathMobile}}" media="(max-width: 767px)" />
-		<source srcset="{{pathTablet}}" media="(max-width: 1023px)" />
-		<source srcset="{{pathLaptop}}" media="(max-width: 1439px)" />
+		<source srcset="{{pathMobile}}" media="(max-width: 580px)" />
+		<source srcset="{{pathTablet}}" media="(max-width: 900px)" />
 		<img class="project-card__img" src="{{ pathDesktop }}" alt="project card image" />
 	</picture>
 

@@ -203,11 +203,13 @@
 
 		<!-- our projects -->
 		<section class="our-projects">
-			<div class="our-container">
-				<!-- title ( name, classTitle ) -->
-				<!-- prettier-ignore -->
-				{% from "src/partials/title.njk" import title %}
-				{{ title("Our Projects", "title_h2 title_light") }}
+			<div class="card-container">
+				<div class="our-projects__title">
+					<!-- title ( name, classTitle ) -->
+					<!-- prettier-ignore -->
+					{% from "src/partials/title.njk" import title %}
+					{{ title("Our Projects", "title_h2 title_light") }}
+				</div>
 				<p class="our-projects__subtext">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
 					posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
@@ -222,67 +224,48 @@
 						"title_card",
 						"project-card__title-block_normal",
 						"/images/our-projects/project-1_1440.jpg",
-						"/images/our-projects/project-1_1024.jpg",
 						"/images/our-projects/project-1_768.jpg",
 						"/images/our-projects/project-1_377.jpg") }}
-					<!-- prettier-ignore -->
-					{% from "src/partials/project-card.njk" import projectCard %}
+
 					{{ projectCard(
 						"project-card_normal",
 						"Minimalist style home",
 						"title_card",
 						"project-card__title-block_normal",
 						"/images/our-projects/project-2_1440.jpg",
-						"/images/our-projects/project-2_1024.jpg",
 						"/images/our-projects/project-2_768.jpg",
 						"/images/our-projects/project-2_377.jpg") }}
-					<!-- prettier-ignore -->
-					{% from "src/partials/project-card.njk" import projectCard %}
+
 					{{ projectCard(
 						"project-card_full",
 						"Residence by the lighthouse",
 						"title_card",
 						"project-card__title-block_full",
 						"/images/our-projects/project-3_1440.jpg",
-						"/images/our-projects/project-3_1024.jpg",
 						"/images/our-projects/project-5_768.jpg",
 						"/images/our-projects/project-3_377.jpg") }}
-					<!-- prettier-ignore -->
-					{% from "src/partials/project-card.njk" import projectCard %}
+
 					{{ projectCard(
 						"project-card_normal",
 						"Eyewear store interior",
 						"title_card",
 						"project-card__title-block_normal",
 						"/images/our-projects/project-4_1440.jpg",
-						"/images/our-projects/project-4_1024.jpg",
 						"/images/our-projects/project-4_768.jpg",
 						"/images/our-projects/project-4_377.jpg") }}
-					<!-- prettier-ignore -->
-					{% from "src/partials/project-card.njk" import projectCard %}
-					{{ projectCard(
-						"project-card_normal",
-						"House on a Hillside",
-						"title_card",
-						"project-card__title-block_normal",
-						"",
-						"",
-						"",
-						"/images/our-projects/project-5_375.jpg") }}
+
 					<div class="our-projects__card-more">
-						<!-- title ( name, classTitle ) -->
-						<!-- prettier-ignore -->
-						{% from "src/partials/title.njk" import title %}
-						{{ title( "See more 60 projects", "title_h3 title_dark") }}
-						<picture>
-							<source srcset="/images/our-projects/see-more_377.jpg" media="(max-width: 767px)" />
-							<source srcset="/images/our-projects/see-more_768.jpg" media="(max-width: 1023px)" />
-							<source srcset="/images/our-projects/see-more_1024.jpg" media="(max-width: 1439px)" />
-							<img
-								class="our-projectcard-img"
-								src="/images/our-projects/see-more_1440.jpg"
-								alt="see more cards" />
-						</picture>
+						<div class="our-projects__card-title">
+							<!-- title ( name, classTitle ) -->
+							<!-- prettier-ignore -->
+							{% from "src/partials/title.njk" import title %}
+							{{ title( "See more 60 projects", "title_h3 title_dark") }}
+						</div>
+						<img
+							class="our-projects__card-img"
+							src="/images/our-projects/see-more_1440.jpg"
+							alt="see more cards" />
+						<img class="our-projects__card-fon" src="/images/our-projects/white-rect.jpg" alt="cards fon" />
 					</div>
 				</div>
 			</div>

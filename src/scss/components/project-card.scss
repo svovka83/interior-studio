@@ -1,9 +1,5 @@
 .project-card {
 	position: relative;
-	height: 653px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 	z-index: 0;
 	cursor: pointer;
 	&::before {
@@ -16,32 +12,21 @@
 		transition: visibility 0.4s ease-in-out, background-color 0.4s ease-in-out;
 	}
 	&_normal {
-		width: 653px;
-		padding: 30px 0 34px 32px;
-		@media (max-width: 1439px) {
-			width: 453px;
-			height: 453px;
+		max-width: 653px;
+		@media (max-width: 900px) {
+			max-width: 788px;
 		}
 	}
 	&_full {
-		width: 1314px;
-		padding: 30px 85px 27px 32px;
-		@media (max-width: 1439px) {
-			width: 912px;
-			height: 453px;
+		max-width: 1314px;
+		@media (max-width: 900px) {
+			max-width: 788px;
 		}
 	}
-	@media (max-width: 1023px) {
-		width: 672px;
-		height: 672px;
-		padding: 30px 0 34px 32px;
-	}
-	@media (max-width: 767px) {
-		width: 327px;
-		height: 327px;
-		padding: 22px 0 26px 24px;
-	}
 	.project-card__location-block {
+		position: absolute;
+		top: 30px;
+		left: 32px;
 		display: flex;
 		align-items: center;
 		gap: 0 18px;
@@ -53,15 +38,26 @@
 		visibility: hidden;
 		opacity: 0;
 		transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;
+		@media (max-width: 420px) {
+			top: 22px;
+			left: 24px;
+		}
 	}
 	.project-card__title-block {
+		position: absolute;
+		left: 32px;
+		right: 85px;
+		bottom: 34px;
 		display: flex;
 		gap: 28px 0;
 		z-index: 2;
 		visibility: hidden;
 		opacity: 0;
 		transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;
-		@media (max-width: 767px) {
+		@media (max-width: 580px) {
+			left: 24px;
+			right: auto;
+			bottom: 26px;
 			gap: 11px 0;
 		}
 		&_normal {
@@ -70,16 +66,10 @@
 		&_full {
 			justify-content: space-between;
 			align-items: end;
-			@media (max-width: 1023px) {
+			@media (max-width: 900px) {
 				flex-direction: column;
 				justify-content: start;
 				align-items: start;
-			}
-			div:last-child {
-				margin-bottom: 7px;
-				@media (max-width: 1023px) {
-					margin-bottom: 0;
-				}
 			}
 		}
 	}
@@ -97,12 +87,9 @@
 			opacity: 1;
 		}
 	}
-	.project-card__picture {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -50;
-		.project-card__img {
-		}
+
+	.project-card__img {
+		display: block;
+		width: 100%;
 	}
 }

@@ -42,6 +42,25 @@ button {
 		padding-right: 23px;
 	}
 }
+.card-container {
+	max-width: 1440px;
+	padding-left: 62px;
+	padding-right: 64px;
+	margin-left: auto;
+	margin-right: auto;
+	@media (max-width: 1024px) {
+		padding-left: 56px;
+		padding-right: 56px;
+	}
+	@media (max-width: 768px) {
+		padding-left: 48px;
+		padding-right: 48px;
+	}
+	@media (max-width: 580px) {
+		padding-left: 22px;
+		padding-right: 26px;
+	}
+}
 .img-container {
 	max-width: 1440px;
 	padding-left: 64px;
